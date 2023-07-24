@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.price {
+	position: relative;
+	z-index: 0;
+	background-color: #ddf0f1;
+	padding: rem(80) rem(0);
+	@include mq(md) {
+		padding-top: rem(100);
+		padding-bottom: rem(92);
+	}
+}
+
+.price__button {
+	text-align: center;
+	margin-top: rem(35);
+	@include mq(md) {
+		margin-top: rem(80);
+	}
+}
+
+.price__img {
+	margin-top: rem(30);
+	@include mq(md) {
+		max-width: rem(746);
+		width: 100%;
+		margin-top: rem(40);
+	}
+}
+
+.price__item {
+	@include mq(md) {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: flex-start;
+		gap: rem(93);
+		position: relative;
+	}
+}
+
+.price__item::after {
+	@include mq(md) {
+		position: absolute;
+		content: "";
+		background-image: url(/assets/images/pc-price-キンギョハナダイ1.png);
+		width: rem(437);
+		height: rem(201);
+		left: rem(-80);
+		bottom: rem(-168);
+		background-size: contain;
+	}
+}

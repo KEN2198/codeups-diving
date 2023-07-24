@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.price-list + .price-list {
+	margin-top: rem(40);
+}
+
+.price-list:nth-child(3) {
+	margin-top: rem(30);
+}
+
+.price-list__title {
+	font-size: rem(16);
+	font-weight: $bold;
+	line-height: calc(24 / 16);
+	// letter-spacing: 0.05em;
+	border-bottom: rem(1) solid $accent-color;
+	padding-bottom: rem(4);
+}
+.price-list__items {
+	margin-top: rem(4);
+}
+
+.price-list__item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: rem(4);
+	padding-bottom: rem(4);
+}
+
+.price-list__course {
+	font-size: rem(14);
+	font-weight: $normal;
+	line-height: calc(24 / 14);
+	// letter-spacing: 0.05em;
+	@include mq(md) {
+		font-size: rem(16);
+		line-height: calc(24 / 16);
+	}
+}
+
+.price-list__price {
+	font-size: rem(14);
+	font-weight: $normal;
+	line-height: calc(24 / 14);
+	// letter-spacing: 0.05em;
+	@include mq(md) {
+		font-size: rem(16);
+		line-height: calc(24 / 16);
+	}
+}

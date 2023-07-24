@@ -1,0 +1,7 @@
+AuthUserFile /home/xs804195/appleken.com/public_html/.htpasswd
+AuthName "hogehoge"
+AuthType Basic
+require valid-user
+<Files ~ "^.(htpasswd|htaccess)$">
+  deny from all
+</Files>

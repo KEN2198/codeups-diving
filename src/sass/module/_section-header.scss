@@ -1,0 +1,105 @@
+@use "global" as *;
+
+.section-header {
+	text-align: center;
+}
+
+.section-header--contact {
+	text-align: center;
+	margin-top: rem(35);
+	@include mq(md) {
+		margin-top: rem(30);
+	}
+}
+
+.section-header__title {
+	font-size: rem(32);
+	line-height: calc(40 / 32);
+	font-family: $en-font-family;
+	font-weight: $normal;
+	font-style: normal;
+	@include mq(md) {
+		font-family: $en-font-family;
+		font-size: rem(40);
+		font-weight: $normal;
+		font-style: normal;
+		line-height: 1;
+	}
+}
+
+.section-header__title--contact {
+	font-size: rem(80);
+	line-height: 1;
+	font-family: $en-font-family;
+	font-weight: $normal;
+	font-style: normal;
+}
+
+.section-header__title--contact::first-letter {
+	color: $accent-color;
+}
+
+.section-header__title::first-letter {
+	color: $accent-color;
+}
+
+.section-header__subtitle {
+	font-size: rem(12);
+	color: $accent-color;
+	font-weight: $normal;
+	line-height: calc(18 / 12);
+	margin-top: rem(4);
+	@include mq(md) {
+		margin-top: rem(8);
+	}
+}
+
+.section-header__subtitle--contact {
+	font-size: rem(12);
+	color: $accent-color;
+	font-weight: $normal;
+	line-height: calc(18 / 12);
+	margin-top: -12px;
+	@include mq(md) {
+		margin-top: rem(-8);
+	}
+}
+
+.section-header--contact__text {
+	font-size: rem(14);
+	color: $accent-color;
+	font-weight: $normal;
+	line-height: calc(18 / 14);
+	margin-top: rem(8);
+	@include mq(md) {
+		margin-top: rem(8);
+	}
+}
+
+.section-header__title--blog {
+	font-size: rem(32);
+	line-height: calc(40 / 32);
+	font-family: $en-font-family;
+	font-weight: $normal;
+	font-style: normal;
+	@include mq(md) {
+		font-family: $en-font-family;
+		font-size: rem(40);
+		font-weight: $normal;
+		font-style: normal;
+		line-height: 1;
+		color: $white;
+	}
+}
+
+.section-header__subtitle--blog {
+	font-size: rem(12);
+	color: $accent-color;
+	font-weight: $normal;
+	line-height: calc(18 / 12);
+	margin-top: rem(4);
+	@include mq(md) {
+		margin-top: rem(8);
+		color: $white;
+	}
+}

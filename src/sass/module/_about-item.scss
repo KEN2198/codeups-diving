@@ -1,0 +1,115 @@
+@use "global" as *;
+
+.about-item__wrapper {
+	position: relative;
+	margin-top: rem(55);
+	height: rem(200);
+	@include mq(md) {
+		height: rem(700);
+		position: relative;
+	}
+}
+
+.about-item__wrapper::after {
+	@include mq(md) {
+		position: absolute;
+		content: "";
+		background-image: url(/assets/images/_サンゴとイソギンチャク.png);
+		width: 13.4722222vw;
+		height: rem(181);
+		top: rem(555);
+		right: rem(-95);
+		background-size: contain;
+	}
+}
+
+.about-item__img-right {
+	aspect-ratio: 281 / 186;
+	position: absolute;
+	right: 0;
+	@include mq(md) {
+		aspect-ratio: 880 / 580;
+		top: rem(65);
+	}
+}
+
+.about-item__img-right img {
+	width: rem(281);
+	height: 100%;
+	object-fit: cover;
+	@include mq(md) {
+		width: rem(880);
+	}
+}
+
+.about-item__img-left {
+	aspect-ratio: 128 / 194;
+	position: absolute;
+	top: -10%;
+	@include mq(md) {
+		aspect-ratio: 399 / 606;
+		top: -2%;
+	}
+}
+
+.about-item__img-left img {
+	width: rem(128);
+	object-fit: cover;
+	@include mq(md) {
+		width: rem(399);
+	}
+}
+
+.about-item__content {
+	margin-top: rem(40);
+	@include mq(md) {
+		display: flex;
+		gap: rem(40);
+		align-items: flex-start;
+		position: absolute;
+		margin-left: rem(190);
+		margin-top: rem(-525);
+	}
+}
+
+.about-item__title {
+	font-size: rem(25);
+	font-weight: $normal;
+	color: $accent-color;
+	line-height: 1;
+	font-family: $en-font-family;
+	font-style: normal;
+	letter-spacing: 0.05em;
+	@include mq(md) {
+		font-size: rem(55);
+		line-height: calc(100 / 80);
+		color: $white;
+		max-width: rem(416);
+		width: 100%;
+		letter-spacing: initial;
+		margin-top: rem(10);
+	}
+}
+
+.about-item__textblock {
+	margin-top: rem(16);
+	@include mq(md) {
+		max-width: rem(400);
+		width: 100%;
+	}
+}
+
+.about-item__text {
+	font-size: rem(16);
+	font-weight: $normal;
+	line-height: calc(24 / 16);
+	font-style: normal;
+	@include mq(md) {
+		color: $white;
+	}
+}
+
+.about-item__button {
+	margin-top: rem(40);
+	text-align: center;
+}

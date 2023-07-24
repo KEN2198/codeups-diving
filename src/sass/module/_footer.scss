@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.footer {
+	background-color: $accent-color;
+	padding-top: rem(48);
+	padding-bottom: rem(56);
+	@include mq(md) {
+		padding-top: rem(48);
+		padding-bottom: rem(80);
+	}
+}
+
+.footer__inner {
+	@include mq(md) {
+	}
+}
+
+.footer__flex {
+	@include mq(md) {
+		display: flex;
+		align-items: center;
+		margin-top: rem(18);
+	}
+}
+
+.footer__sns {
+	display: flex;
+	gap: rem(16);
+	margin-top: rem(14);
+	@include mq(md) {
+		margin-left: rem(40);
+		margin-top: rem(40);
+	}
+}
+
+.footer__sns img {
+	width: rem(24);
+	height: rem(24);
+	@include mq(md) {
+		width: rem(32);
+		height: rem(32);
+	}
+}

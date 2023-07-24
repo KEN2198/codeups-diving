@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.header {
+	position: relative;
+	height: rem(80);
+	// max-width: rem(375);
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background-color: #0d2936ad;
+	padding: rem(21) rem(0);
+	z-index: 9999;
+	transition: ease 0.3s;
+
+	@include mq(md) {
+		height: rem(90);
+		max-width: rem(1440);
+		padding: rem(19) rem(0);
+	}
+}
+
+.header.change-color {
+	background-color: #9a9a9a;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: rem(345);
+	width: 100%;
+	margin: auto;
+	@include mq(md) {
+		max-width: rem(1360);
+		margin: auto;
+		width: 100%;
+		justify-content: initial;
+	}
+	@include mq(sm) {
+		max-width: rem(600);
+	}
+}
+
+.header__logo {
+	width: rem(102);
+	height: rem(38);
+	@include mq(md) {
+		width: rem(133);
+		height: rem(50);
+	}
+}

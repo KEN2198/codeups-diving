@@ -1,0 +1,88 @@
+@use "global" as *;
+
+.button {
+	display: inline-block;
+	max-width: rem(206);
+	width: 100%;
+	background-color: $accent-color;
+	color: $white;
+	padding: rem(16);
+	padding-right: rem(48);
+	padding-left: rem(0);
+	font-size: rem(13);
+	font-weight: $normal;
+	font-family: $en-font-family;
+	line-height: calc(22 / 14);
+	letter-spacing: 0.06em;
+	position: relative;
+	z-index: 1;
+	overflow: visible;
+}
+
+.button::after {
+	background: $white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: rem(1) solid $accent-color;
+	content: "";
+	width: 100%;
+	height: 100%;
+	transform: scale(0, 1);
+	transform-origin: left top;
+	transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+	z-index: -1;
+}
+
+.button:hover {
+	color: $accent-color;
+}
+.button:hover::after {
+	transform: scale(1, 1);
+}
+
+.button::before {
+	position: absolute;
+	content: "";
+	background-image: url(/assets/images/button-arrow.jpg);
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	top: 50%;
+	left: 61%;
+	transform: translateY(-90%);
+	max-width: rem(40);
+	width: 100%;
+	height: rem(8);
+}
+
+.button:hover::before {
+	position: absolute;
+	content: "";
+	background-image: url(/assets/images/button-arrow-active.jpg);
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	top: 50%;
+	left: 61%;
+	transform: translateY(-90%);
+	max-width: rem(40);
+	width: 100%;
+	height: rem(8);
+}
+
+.button span {
+	position: relative; /* 要素に position: relative; を追加 */
+}
+
+.button span::after {
+	content: "";
+	border: rem(1) solid $accent-color;
+	position: absolute;
+	top: rem(-12);
+	right: rem(-118);
+	left: rem(-35);
+	width: rem(204);
+	height: rem(54);
+	z-index: -1;
+}

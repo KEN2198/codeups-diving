@@ -1,0 +1,88 @@
+@use "global" as *;
+
+.swiper-wrapper {
+	height: rem(667);
+	@include mq(md) {
+		height: rem(768);
+	}
+}
+
+.swiper-container {
+	padding-left: rem(15); //左右の余白はcontainerに指定する
+	padding-right: rem(40);
+	margin-top: rem(24);
+	overflow: hidden;
+	@include mq(md) {
+		padding-left: rem(180);
+		margin-top: rem(40);
+		padding-right: rem(100);
+		position: relative;
+	}
+	@include mq(sm) {
+		padding-right: rem(400);
+	}
+}
+
+.campaign-slide {
+	@include mq(md) {
+		max-width: rem(333);
+		width: 100%;
+		margin-right: rem(40);
+	}
+}
+
+.campaign-wrapper {
+	height: rem(400);
+	@include mq(md) {
+		height: rem(480);
+	}
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev {
+	@include mq(md) {
+		height: 80px;
+		width: 5.55vw;
+		top: 3%;
+		left: 71%;
+	}
+}
+
+.swiper-button-next {
+	@include mq(md) {
+		height: 80px;
+		width: 5.55vw;
+		top: 3%;
+		right: 12.5%;
+	}
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	@include mq(md) {
+		background-repeat: no-repeat;
+		background-size: contain;
+		content: "";
+		height: 80px;
+		// margin: auto;
+		width: 80px;
+	}
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev::after {
+	@include mq(md) {
+		background-image: url(/assets/images/prev-arrow.png);
+	}
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+	@include mq(md) {
+		background-image: url(/assets/images/next-arrow.png);
+	}
+}
+/* 画像サイズ調整 */
+.swiper-slide img {
+	height: auto;
+	width: 100%;
+}

@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.blog {
+	@include mq(md) {
+		background-image: url(/assets/images/pc-blog-bg.jpg);
+		background-size: cover;
+		height: rem(500);
+		background-repeat: no-repeat;
+		position: relative;
+		z-index: 1000;
+	}
+}
+
+.blog::after {
+	@include mq(md) {
+		position: absolute;
+		content: "";
+		background-image: url(/assets/images/pc-キンギョハナダイ1.png);
+		width: rem(437);
+		height: rem(201);
+		z-index: 1001;
+		top: rem(26);
+		left: rem(100);
+	}
+}
+
+.blog__inner {
+	padding: rem(0) rem(21);
+	@include mq(md) {
+		padding: rem(110) rem(180);
+	}
+}
+
+.blog__button {
+	text-align: center;
+	margin-top: rem(40);
+	@include mq(md) {
+		margin-top: rem(80);
+	}
+}

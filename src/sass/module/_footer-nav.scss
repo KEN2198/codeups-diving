@@ -1,0 +1,102 @@
+@use "global" as *;
+
+.footer-nav {
+	@include mq(md) {
+		display: none;
+	}
+}
+
+.footer-nav__menu {
+	display: flex;
+	margin-top: rem(18);
+	@include mq(md) {
+		margin-top: rem(0);
+		white-space: nowrap;
+	}
+}
+
+.footer-nav__content {
+	@include mq(md) {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.footer-nav__logo img {
+	width: rem(120);
+	height: rem(45);
+
+	@include mq(md) {
+		width: rem(200);
+		height: rem(75);
+	}
+}
+
+.footer-nav__items {
+	margin-right: rem(14);
+	@include mq(md) {
+		margin-right: rem(108);
+	}
+}
+
+.footer-nav__item-link a {
+	display: block;
+	max-width: rem(200);
+	width: 100%;
+	font-size: 1.6rem;
+	color: #fff;
+	font-size: rem(16);
+	font-weight: $bold;
+	line-height: 1;
+	padding-left: rem(22);
+	padding-top: rem(12);
+	padding-bottom: rem(12);
+	position: relative;
+	margin-top: rem(16);
+}
+
+.footer-nav__item-link a::before {
+	position: absolute;
+	content: "";
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: rem(18);
+	height: rem(18);
+	background-image: url(/assets/images/_ヒトデ.png);
+}
+
+.footer-nav__item a {
+	display: block;
+	width: 100%;
+	font-size: 1.6rem;
+	color: #fff;
+	font-size: rem(16);
+	font-weight: $normal;
+	line-height: 1;
+	padding-top: rem(12);
+	padding-bottom: rem(12);
+	padding-left: rem(22);
+}
+
+.footer-nav__copyright {
+	display: block;
+	font-size: rem(12);
+	font-family: $en-font-family;
+	font-weight: $normal;
+	color: $white;
+	margin-top: rem(42);
+	max-width: rem(347);
+	width: 100%;
+	white-space: nowrap;
+	line-height: 1;
+	margin: auto;
+	@include mq(md) {
+		font-size: rem(14);
+		margin-top: rem(75);
+		max-width: rem(405);
+	}
+}
