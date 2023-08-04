@@ -24,6 +24,10 @@
 	gap: rem(5);
 }
 
+.sp-nav__content {
+	width: 49%;
+}
+
 .sp-nav__logo img {
 	position: fixed;
 	top: rem(21);
@@ -34,7 +38,6 @@
 
 .sp-nav__item-link a {
 	display: block;
-	max-width: rem(200);
 	width: 100%;
 	font-size: 1.6rem;
 	color: #fff;

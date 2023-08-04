@@ -8,6 +8,7 @@
 		background-repeat: no-repeat;
 		position: relative;
 		z-index: 1000;
+		padding-top: rem(113);
 	}
 }
 
@@ -15,19 +16,12 @@
 	@include mq(md) {
 		position: absolute;
 		content: "";
-		background-image: url(/assets/images/pc-キンギョハナダイ1.png);
+		background-image: url(/assets/images/pc-kingyohanadai.png);
 		width: rem(437);
 		height: rem(201);
 		z-index: 1001;
 		top: rem(26);
 		left: rem(100);
-	}
-}
-
-.blog__inner {
-	padding: rem(0) rem(21);
-	@include mq(md) {
-		padding: rem(110) rem(180);
 	}
 }
 

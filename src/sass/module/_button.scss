@@ -44,7 +44,7 @@
 .button::before {
 	position: absolute;
 	content: "";
-	background-image: url(/assets/images/button-arrow.jpg);
+	background-image: url(/assets/images/button-arrow-white.png);
 	background-position: center center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -59,7 +59,7 @@
 .button:hover::before {
 	position: absolute;
 	content: "";
-	background-image: url(/assets/images/button-arrow-active.jpg);
+	background-image: url(/assets/images/button-arrow-active.png);
 	background-position: center center;
 	background-size: contain;
 	background-repeat: no-repeat;

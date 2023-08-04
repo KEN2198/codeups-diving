@@ -1,11 +1,12 @@
 @use "global" as *;
 
 .pc-nav {
-	height: inherit;
 	display: none;
+
 	@include mq(md) {
-		display: block;
+		display: flex;
 		margin-left: auto;
+		height: inherit;
 	}
 }
 
@@ -16,17 +17,20 @@
 }
 
 .pc-nav__item {
+	height: inherit;
 	display: flex;
 	align-items: center;
-	height: inherit;
 	gap: rem(40);
 }
 
 .pc-nav__item a {
-	height: inherit;
-	// display: flex;
+	display: block;
 	width: 100%;
+	text-align: center;
+	white-space: nowrap;
+	position: relative;
 	font-size: 1.6rem;
 	color: #fff;
 	align-items: center;
+	height: inherit;
 }

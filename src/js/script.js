@@ -10,28 +10,45 @@ jQuery(function ($) {
 			$(this).addClass("is-open");
 		}
 	});
-	var swiper = new Swiper(".swiper", {
+	// var swiper = new Swiper(".swiper", {
+	// 	loop: true,
+	// 	speed: 1000, // 少しゆっくり(デフォルトは300)
+	// 	autoplay: {
+	// 		// 自動再生
+	// 		delay: 1500, // 1.5秒後に次のスライド
+	// 	},
+	// });
+	// var swiper = new Swiper(".mySwiper", {
+	// 	loop: true,
+	// 	speed: 1000, // 少しゆっくり(デフォルトは300)
+	// 	autoplay: {
+	// 		// 自動再生
+	// 		delay: 3500, // 1.5秒後に次のスライド
+	// 		reverseDirection: true,
+	// 	},
+	// 	navigation: {
+	// 		nextEl: ".swiper-button-next", //必須
+	// 		prevEl: ".swiper-button-prev", //必須
+	// 		clickable: true,
+	// 	},
+	// });
+	const swiper = new Swiper(".js-campaign-swiper", {
 		loop: true,
-		speed: 1000, // 少しゆっくり(デフォルトは300)
-		autoplay: {
-			// 自動再生
-			delay: 1500, // 1.5秒後に次のスライド
+		spaceBetween: 24,
+		slidesPerView: 1.3,
+		breakpoints: {
+			768: {
+				slidesPerView: 3.5,
+				spaceBetween: 40,
+				navigation: {
+					nextEl: ".swiper-button-next", //必須
+					prevEl: ".swiper-button-prev", //必須
+					clickable: true,
+				},
+			},
 		},
 	});
-	var swiper = new Swiper(".swiper-container", {
-		loop: true,
-		speed: 1000, // 少しゆっくり(デフォルトは300)
-		autoplay: {
-			// 自動再生
-			delay: 3500, // 1.5秒後に次のスライド
-			reverseDirection: true,
-		},
-		navigation: {
-			nextEl: ".swiper-button-next", //必須
-			prevEl: ".swiper-button-prev", //必須
-			clickable: true,
-		},
-	});
+
 	jQuery(window).on("scroll", function () {
 		if (jQuery(".mv").height() < jQuery(this).scrollTop()) {
 			jQuery(".header").addClass("change-color");
@@ -64,13 +81,6 @@ jQuery(function ($) {
 				counter = 1;
 			}
 		});
-	});
-	$(window).on("scroll", function () {
-		if ($(window).scrollTop() > 700) {
-			$(".contact__to-top").fadeIn(400);
-		} else {
-			$(".contact__to-top").fadeOut(400);
-		}
 	});
 	$(function () {
 		// #で始まるアンカーをクリックした場合に処理

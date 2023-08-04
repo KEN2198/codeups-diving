@@ -1,19 +1,18 @@
 @use "global" as *;
 
-.pc-header-item__link {
-	display: block;
-	height: inherit;
-	width: 100%;
-	text-align: center;
-	white-space: nowrap;
-	position: relative;
+.pc-header-item__content {
+	height: 100%; /* aタグのコンテンツをヘッダーの高さいっぱいに広げる */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .pc-header-item__link::after {
 	content: "";
 	/*絶対配置で線の位置を決める*/
 	position: absolute;
-	bottom: rem(-5);
+	bottom: rem(25);
 	left: 10%;
 	/*線の形状*/
 	width: 80%;

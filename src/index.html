@@ -82,36 +82,52 @@
 					<ul class="pc-nav__items">
 						<li class="pc-nav__item">
 							<a href="#Campaign" class="pc-header-item__link">
-								<p class="pc-header-item__title">Campaign</p>
-								<p class="pc-header-item__subtitle">キャンペーン</p>
+								<div class="pc-header-item__content">
+									<p class="pc-header-item__title">Campaign</p>
+									<p class="pc-header-item__subtitle">キャンペーン</p>
+								</div>
 							</a>
 							<a href="#About" class="pc-header-item__link">
-								<p class="pc-header-item__title">About us</p>
-								<p class="pc-header-item__subtitle">私たちについて</p>
+								<div class="pc-header-item__content">
+									<p class="pc-header-item__title">About us</p>
+									<p class="pc-header-item__subtitle">私たちについて</p>
+								</div>
 							</a>
 							<a href="#Information" class="pc-header-item__link">
-								<p class="pc-header-item__title">Information</p>
-								<p class="pc-header-item__subtitle">ダイビング情報</p>
+								<div class="pc-header-item__content">
+									<p class="pc-header-item__title">Information</p>
+									<p class="pc-header-item__subtitle">ダイビング情報</p>
+								</div>
 							</a>
 							<a href="#Blog" class="pc-header-item__link">
-								<p class="pc-header-item__title">Blog</p>
-								<p class="pc-header-item__subtitle">ブログ</p>
+								<div class="pc-header-item__content">
+									<p class="pc-header-item__title">Blog</p>
+									<p class="pc-header-item__subtitle">ブログ</p>
+								</div>
 							</a>
 							<a href="#Voice" class="pc-header-item__link">
-								<p class="pc-header-item__title">Voice</p>
-								<p class="pc-header-item__subtitle">お客様の声</p>
+								<div class="pc-header-item__content">
+									<p class="pc-header-item__title">Voice</p>
+									<p class="pc-header-item__subtitle">お客様の声</p>
+								</div>
 							</a>
 							<a href="#Price" class="pc-header-item__link">
-								<p class="pc-header-item__title">Price</p>
-								<p class="pc-header-item__subtitle">料金一覧</p>
+								<div class="pc-header-item__content">
+									<p class="pc-header-item__title">Price</p>
+									<p class="pc-header-item__subtitle">料金一覧</p>
+								</div>
 							</a>
 							<a href="#FAQ" class="pc-header-item__link">
-								<p class="pc-header-item__title">FAQ</p>
-								<p class="pc-header-item__subtitle">よくある質問</p>
+								<div class="pc-header-item__content">
+									<p class="pc-header-item__title">FAQ</p>
+									<p class="pc-header-item__subtitle">よくある質問</p>
+								</div>
 							</a>
 							<a href="#Contact" class="pc-header-item__link">
-								<p class="pc-header-item__title">Contact</p>
-								<p class="pc-header-item__subtitle">お問合せ</p>
+								<div class="pc-header-item__content">
+									<p class="pc-header-item__title">Contact</p>
+									<p class="pc-header-item__subtitle">お問合せ</p>
+								</div>
 							</a>
 						</li>
 					</ul>
@@ -161,91 +177,90 @@
 						<h1 class="section-header__title">Campaign</h1>
 						<p class="section-header__subtitle">キャンペーン</p>
 					</div>
-					<!-- Slider container -->
-					<div class="swiper-container">
-						<!-- Slider wrapper -->
-						<div class="swiper-wrapper campaign-wrapper">
-							<!-- Slides -->
-							<div class="swiper-slide campaign-slide">
-								<div class="campaign-card">
-									<div class="campaign-card__img">
-										<img src="/assets/images/campaign1.jpg" alt="キャンペーンカード１" />
-									</div>
-									<div class="campaign-card__body">
-										<div class="campaign-card__category">
-											<a href="#">ライセンス講習</a>
+					<div class="campaign__container">
+						<div class="swiper campaign__swiper js-campaign-swiper">
+							<div class="swiper-wrapper campaign-wrapper">
+								<div class="swiper-slide">
+									<div class="campaign-card">
+										<div class="campaign-card__img">
+											<img src="/assets/images/campaign1.jpg" alt="キャンペーンカード１" />
 										</div>
-										<h3 class="campaign-card__title">ライセンス取得</h3>
-										<p class="campaign-card__subtitle">全部コミコミ(お一人様)</p>
-										<div class="campaign-card__price">
-											<p class="campaign-card__price--black">
-												¥56,000
-												<span></span>
-											</p>
-											<p class="campaign-card__price--accect">¥46,000</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide campaign-slide">
-								<div class="campaign-card">
-									<div class="campaign-card__img">
-										<img src="/assets/images/campaign2.jpg" alt="キャンペーンカード２" />
-									</div>
-									<div class="campaign-card__body">
-										<div class="campaign-card__category">
-											<a href="#">体験ダイビング</a>
-										</div>
-										<h3 class="campaign-card__title">貸切体験ダイビング</h3>
-										<p class="campaign-card__subtitle">全部コミコミ(お一人様)</p>
-										<div class="campaign-card__price">
-											<p class="campaign-card__price--black">
-												¥24,000
-												<span></span>
-											</p>
-											<p class="campaign-card__price--accect">¥18,000</p>
+										<div class="campaign-card__body">
+											<div class="campaign-card__category">
+												<a href="#">ライセンス講習</a>
+											</div>
+											<h3 class="campaign-card__title">ライセンス取得</h3>
+											<p class="campaign-card__subtitle">全部コミコミ(お一人様)</p>
+											<div class="campaign-card__price">
+												<p class="campaign-card__price--black">
+													¥56,000
+													<span></span>
+												</p>
+												<p class="campaign-card__price--accect">¥46,000</p>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="swiper-slide campaign-slide">
-								<div class="campaign-card">
-									<div class="campaign-card__img">
-										<img src="/assets/images/campaign3.jpg" alt="キャンペーンカード３" />
-									</div>
-									<div class="campaign-card__body">
-										<div class="campaign-card__category">
-											<a href="#">体験ダイビング</a>
+								<div class="swiper-slide">
+									<div class="campaign-card">
+										<div class="campaign-card__img">
+											<img src="/assets/images/campaign2.jpg" alt="キャンペーンカード２" />
 										</div>
-										<h3 class="campaign-card__title">ナイトダイビング</h3>
-										<p class="campaign-card__subtitle">全部コミコミ(お一人様)</p>
-										<div class="campaign-card__price">
-											<p class="campaign-card__price--black">
-												¥10,000
-												<span></span>
-											</p>
-											<p class="campaign-card__price--accect">¥8,000</p>
+										<div class="campaign-card__body">
+											<div class="campaign-card__category">
+												<a href="#">体験ダイビング</a>
+											</div>
+											<h3 class="campaign-card__title">貸切体験ダイビング</h3>
+											<p class="campaign-card__subtitle">全部コミコミ(お一人様)</p>
+											<div class="campaign-card__price">
+												<p class="campaign-card__price--black">
+													¥24,000
+													<span></span>
+												</p>
+												<p class="campaign-card__price--accect">¥18,000</p>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="swiper-slide campaign-slide">
-								<div class="campaign-card">
-									<div class="campaign-card__img">
-										<img src="/assets/images/campaign4.jpg" alt="キャンペーンカード４" />
-									</div>
-									<div class="campaign-card__body">
-										<div class="campaign-card__category">
-											<a href="#">ファンダイビング</a>
+								<div class="swiper-slide">
+									<div class="campaign-card">
+										<div class="campaign-card__img">
+											<img src="/assets/images/campaign3.jpg" alt="キャンペーンカード３" />
 										</div>
-										<h3 class="campaign-card__title">貸切ファンダイビング</h3>
-										<p class="campaign-card__subtitle">全部コミコミ(お一人様)</p>
-										<div class="campaign-card__price">
-											<p class="campaign-card__price--black">
-												¥20,000
-												<span></span>
-											</p>
-											<p class="campaign-card__price--accect">¥16,000</p>
+										<div class="campaign-card__body">
+											<div class="campaign-card__category">
+												<a href="#">体験ダイビング</a>
+											</div>
+											<h3 class="campaign-card__title">ナイトダイビング</h3>
+											<p class="campaign-card__subtitle">全部コミコミ(お一人様)</p>
+											<div class="campaign-card__price">
+												<p class="campaign-card__price--black">
+													¥10,000
+													<span></span>
+												</p>
+												<p class="campaign-card__price--accect">¥8,000</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="campaign-card">
+										<div class="campaign-card__img">
+											<img src="/assets/images/campaign4.jpg" alt="キャンペーンカード４" />
+										</div>
+										<div class="campaign-card__body">
+											<div class="campaign-card__category">
+												<a href="#">ファンダイビング</a>
+											</div>
+											<h3 class="campaign-card__title">貸切ファンダイビング</h3>
+											<p class="campaign-card__subtitle">全部コミコミ(お一人様)</p>
+											<div class="campaign-card__price">
+												<p class="campaign-card__price--black">
+													¥20,000
+													<span></span>
+												</p>
+												<p class="campaign-card__price--accect">¥16,000</p>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -317,13 +332,13 @@
 				</div>
 			</section>
 			<section id="Blog" class="blog top-blog">
-				<div class="blog__inner">
+				<div class="blog__inner inner">
 					<div class="section-header">
 						<h1 class="section-header__title--blog">Blog</h1>
 						<p class="section-header__subtitle--blog">ブログ</p>
 					</div>
 					<div class="blog-cards">
-						<div class="blog-card">
+						<a class="blog-card">
 							<div class="blog-card__img">
 								<img src="/assets/images/blog1.jpg" alt="イソギンチャクの写真" />
 							</div>
@@ -336,7 +351,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 						<div class="blog-card">
 							<div class="blog-card__img">
 								<img src="/assets/images/blog2.jpg" alt="ウミガメの写真" />
@@ -526,7 +541,7 @@
 				</div>
 			</section>
 			<section id="Contact" class="contact">
-				<div class="contact__inner">
+				<div class="contact__inner inner">
 					<div class="contact__items">
 						<div class="contact__item">
 							<div class="contact__logo">
@@ -558,7 +573,7 @@
 				</div>
 			</section>
 		</main>
-		<footer class="footer top-footer">
+		<footer class="footer">
 			<div class="footer__inner inner">
 				<div class="footer__flex">
 					<a href="#" class="footer-nav__logo"><img src="/assets/images/footer-logo.jpg" alt="フッターロゴ" /></a>

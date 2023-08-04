@@ -6,10 +6,18 @@
 	}
 }
 
+.campaign__inner {
+	@include mq(md) {
+		max-width: rem(1440);
+		width: 100%;
+		margin: auto;
+	}
+}
+
 .campaign__button {
-	margin-top: rem(10);
+	margin-top: rem(40);
 	text-align: center;
 	@include mq(md) {
-		margin-top: rem(50);
+		margin-top: rem(80);
 	}
 }

@@ -1,20 +1,28 @@
 @use "global" as *;
 
-.contact__inner {
+// .contact__inner {
+// 	padding-top: rem(80);
+// 	// padding-right: rem(30);
+// 	// padding-left: rem(30);
+// 	padding-bottom: rem(16);
+// 	max-width: rem(315);
+// 	width: 100%;
+// 	margin: auto;
+// 	@include mq(md) {
+// 		max-width: rem(1080);
+// 		padding-top: rem(150);
+// 		padding-bottom: rem(20);
+// 	}
+// }
+.contact {
 	padding-top: rem(80);
-	// padding-right: rem(30);
-	// padding-left: rem(30);
-	padding-bottom: rem(16);
-	max-width: rem(315);
-	width: 100%;
-	margin: auto;
+	padding-bottom: rem(80);
 	@include mq(md) {
-		max-width: rem(1080);
-		padding-top: rem(140);
-		padding-bottom: rem(24);
+		padding-top: rem(150);
+		padding-bottom: rem(150);
+		position: relative;
 	}
 }
-
 .contact__logo {
 	text-align: center;
 	position: relative;
@@ -40,7 +48,7 @@
 	@include mq(md) {
 		position: absolute;
 		content: "";
-		background-image: url(/assets/images/pc-contact-キンギョハナダイ.png);
+		background-image: url(/assets/images/pc-contact-kingyohanadai.png);
 		width: rem(301);
 		height: rem(138);
 		top: rem(-37);
@@ -172,29 +180,22 @@
 	margin-top: rem(40);
 }
 
-.contact__to-top {
-	margin-top: rem(88);
-	margin-left: rem(282);
-	@include mq(md) {
-		margin-top: rem(152);
-	}
-}
+// .contact__to-top {
+// 	@include mq(md) {
+// 		margin-top: rem(152);
+// 	}
+// }
 
 .contact__to-top a {
-	display: block;
+	display: inline-block;
+	position: absolute;
 	width: rem(48);
 	height: rem(48);
-	position: fixed;
-	bottom: rem(750);
+	right: rem(15);
 	@include mq(md) {
 		width: rem(80);
 		height: rem(80);
-		position: fixed;
-		bottom: rem(575);
 		right: rem(20);
-		z-index: 1;
-	}
-	@include mq(sm) {
-		right: rem(30);
+		bottom: 2%;
 	}
 }
