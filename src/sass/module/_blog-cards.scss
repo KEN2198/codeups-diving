@@ -1,15 +1,23 @@
 @use "global" as *;
 
 .blog-cards {
+	display: grid;
 	max-width: rem(600);
 	width: 100%;
 	margin: auto;
 	margin-top: rem(30);
+	column-gap: rem(40);
+	row-gap: rem(40);
+	grid-template-columns: 1fr;
+	justify-items: center;
+	padding-right: rem(5);
+	padding-left: rem(5);
 	@include mq(md) {
 		max-width: rem(1080);
 		margin-top: rem(80);
-		display: flex;
+		display: grid;
 		align-items: center;
-		gap: rem(40);
+		grid-template-columns: repeat(3, 1fr);
+		row-gap: rem(80);
 	}
 }

@@ -1,27 +1,49 @@
 @use "global" as *;
 
 .blog {
-	@include mq(md) {
-		background-image: url(/assets/images/pc-blog-bg.jpg);
-		background-size: cover;
-		height: rem(500);
-		background-repeat: no-repeat;
+	@include mq("md") {
 		position: relative;
-		z-index: 1000;
-		padding-top: rem(113);
 	}
 }
 
-.blog::after {
+.blog::before {
 	@include mq(md) {
+		background-image: url(/assets/images/pc-blog-bg.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
 		position: absolute;
 		content: "";
-		background-image: url(/assets/images/pc-kingyohanadai.png);
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: rem(500);
+		background-position: center top;
+	}
+}
+
+.blog__inner {
+	position: relative;
+	max-width: rem(612);
+	width: 100%;
+
+	@include mq("md") {
+		max-width: 100%;
+	}
+}
+
+.blog__inner::before {
+	@include mq("md") {
+		position: absolute;
+		content: "";
+		top: rem(-76);
+		left: calc(50% - (min(48.062vw, rem(620))));
 		width: rem(437);
 		height: rem(201);
-		z-index: 1001;
-		top: rem(26);
-		left: rem(100);
+		background-image: url(/assets/images/pc-kingyohanadai.png);
+
+		background-repeat: no-repeat;
+		background-size: contain;
+		z-index: 20;
 	}
 }
 

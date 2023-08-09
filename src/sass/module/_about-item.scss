@@ -1,78 +1,84 @@
 @use "global" as *;
 
-.about-item__wrapper {
-	position: relative;
-	margin-top: rem(55);
-	height: rem(200);
+.about__inner {
+	max-width: rem(600);
+	width: 100%;
 	@include mq(md) {
-		height: rem(700);
+		max-width: 100%;
+	}
+}
+
+.about__item {
+	position: relative;
+	margin-top: rem(40);
+	@include mq(md) {
 		position: relative;
 	}
 }
 
-.about-item__wrapper::after {
+.about__item::after {
 	@include mq(md) {
 		position: absolute;
 		content: "";
-		background-image: url(/assets/images/_sango.png);
-		width: 13.4722222vw;
+		bottom: rem(-90);
+		right: calc(50% - (min(48.111vw, rem(637))));
+		width: rem(194);
 		height: rem(181);
-		top: rem(555);
-		right: rem(-95);
+		background-image: url(/assets/images/_sango.png);
+		background-repeat: no-repeat;
 		background-size: contain;
+		z-index: 20;
 	}
 }
 
-.about-item__img-right {
+.about__img-wrap {
+	display: flex;
+	width: 100%;
+}
+
+.about__img-right {
+	position: relative;
+	margin-top: 7.4%;
+	margin-left: -18.55%;
+	z-index: 9;
+	width: rem(880);
+}
+
+.about__img-right img {
 	aspect-ratio: 281 / 186;
-	position: absolute;
-	right: 0;
-	@include mq(md) {
-		aspect-ratio: 880 / 580;
-		top: rem(65);
-	}
-}
-
-.about-item__img-right img {
-	width: rem(281);
-	height: 100%;
 	object-fit: cover;
 	@include mq(md) {
-		width: rem(880);
+		aspect-ratio: 880 / 581;
 	}
 }
 
-.about-item__img-left {
+.about__img-left {
+	position: relative;
+	z-index: 10;
+	width: rem(400);
+}
+
+.about__img-left img {
 	aspect-ratio: 128 / 194;
-	position: absolute;
-	top: -10%;
-	@include mq(md) {
-		aspect-ratio: 399 / 606;
-		top: -2%;
-	}
-}
-
-.about-item__img-left img {
-	width: rem(128);
 	object-fit: cover;
 	@include mq(md) {
-		width: rem(399);
+		aspect-ratio: 400 / 606;
 	}
 }
 
-.about-item__content {
+.about__content {
 	margin-top: rem(40);
 	@include mq(md) {
 		display: flex;
-		gap: rem(40);
-		align-items: flex-start;
 		position: absolute;
-		margin-left: rem(190);
-		margin-top: rem(-525);
+		top: 24.5%;
+		left: 17.518%;
+		display: flex;
+		z-index: 11;
 	}
 }
 
-.about-item__title {
+.about__title {
 	font-size: rem(25);
 	font-weight: $normal;
 	color: $accent-color;
@@ -87,19 +93,20 @@
 		max-width: rem(416);
 		width: 100%;
 		letter-spacing: initial;
-		margin-top: rem(10);
 	}
 }
 
-.about-item__textblock {
+.about__textblock {
 	margin-top: rem(16);
 	@include mq(md) {
 		max-width: rem(400);
 		width: 100%;
+		margin-left: rem(40);
+		margin-top: rem(0);
 	}
 }
 
-.about-item__text {
+.about__text {
 	font-size: rem(16);
 	font-weight: $normal;
 	line-height: calc(24 / 16);
@@ -109,7 +116,7 @@
 	}
 }
 
-.about-item__button {
+.about__button {
 	margin-top: rem(40);
 	text-align: center;
 }

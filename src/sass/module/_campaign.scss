@@ -1,23 +1,21 @@
 @use "global" as *;
 
-.campaign {
-	@include mq(md) {
-		position: relative;
-	}
-}
-
 .campaign__inner {
-	@include mq(md) {
-		max-width: rem(1440);
-		width: 100%;
-		margin: auto;
-	}
+	position: relative;
 }
 
 .campaign__button {
-	margin-top: rem(40);
+	margin-top: rem(24);
 	text-align: center;
 	@include mq(md) {
 		margin-top: rem(80);
+	}
+}
+
+.campaign-slide {
+	width: rem(280);
+
+	@include mq(md) {
+		width: rem(333);
 	}
 }

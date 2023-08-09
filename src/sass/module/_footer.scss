@@ -2,16 +2,24 @@
 
 .footer {
 	background-color: $accent-color;
-	padding-top: rem(48);
+	padding-top: rem(53);
 	padding-bottom: rem(56);
 	@include mq(md) {
-		padding-top: rem(48);
+		padding-top: rem(64);
 		padding-bottom: rem(80);
 	}
 }
 
 .footer__inner {
+	max-width: rem(375);
+	width: 100%;
+	padding-right: rem(15);
+	padding-left: rem(15);
+
 	@include mq(md) {
+		max-width: rem(1130);
+		padding-right: rem(25);
+		padding-left: rem(25);
 	}
 }
 
@@ -26,7 +34,7 @@
 .footer__sns {
 	display: flex;
 	gap: rem(16);
-	margin-top: rem(14);
+	margin-top: rem(19);
 	@include mq(md) {
 		margin-left: rem(40);
 		margin-top: rem(40);

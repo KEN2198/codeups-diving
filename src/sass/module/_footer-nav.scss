@@ -1,24 +1,27 @@
 @use "global" as *;
 
-.footer-nav {
-	@include mq(md) {
-		display: none;
-	}
-}
-
 .footer-nav__menu {
+	max-width: rem(375);
 	display: flex;
 	margin-top: rem(18);
 	@include mq(md) {
-		margin-top: rem(0);
-		white-space: nowrap;
+		max-width: 100%;
+		margin-top: rem(1);
 	}
 }
 
-.footer-nav__content {
+.footer-nav__content--right,
+.footer-nav__content--left {
 	@include mq(md) {
 		display: flex;
 		align-items: center;
+	}
+}
+
+.footer-nav__content--left {
+	margin-left: rem(18);
+	@include mq(md) {
+		margin-left: rem(0);
 	}
 }
 
@@ -32,10 +35,9 @@
 	}
 }
 
-.footer-nav__items {
-	margin-right: rem(14);
+.footer-nav__items--margin {
 	@include mq(md) {
-		margin-right: rem(108);
+		margin-left: 120px;
 	}
 }
 

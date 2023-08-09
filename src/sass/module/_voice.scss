@@ -13,8 +13,9 @@
 		background-image: url(/assets/images/voice-ibaratatu.png);
 		width: rem(71);
 		height: rem(162);
-		top: rem(540);
-		right: rem(180);
+		bottom: rem(-71);
+		right: calc(50% - (min(47.787vw, rem(540))));
+		background-repeat: no-repeat;
 		background-size: contain;
 	}
 }
@@ -27,7 +28,8 @@
 		width: rem(301);
 		height: rem(138);
 		top: rem(-120);
-		left: rem(100);
+		left: calc(50% - (min(48.062vw, rem(620))));
+		background-repeat: no-repeat;
 		background-size: contain;
 	}
 }

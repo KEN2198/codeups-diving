@@ -2,6 +2,7 @@
 
 .campaign-card {
 	box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+	display: block;
 	// max-width: rem(280);
 	width: 100%;
 	@include mq(md) {
@@ -33,7 +34,7 @@
 	}
 }
 
-.campaign-card__category a {
+.campaign-card__category p {
 	display: inline-block;
 	border: rem(1) solid $accent-color;
 	color: $accent-color;

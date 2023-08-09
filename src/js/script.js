@@ -10,42 +10,35 @@ jQuery(function ($) {
 			$(this).addClass("is-open");
 		}
 	});
-	// var swiper = new Swiper(".swiper", {
-	// 	loop: true,
-	// 	speed: 1000, // 少しゆっくり(デフォルトは300)
-	// 	autoplay: {
-	// 		// 自動再生
-	// 		delay: 1500, // 1.5秒後に次のスライド
-	// 	},
-	// });
-	// var swiper = new Swiper(".mySwiper", {
-	// 	loop: true,
-	// 	speed: 1000, // 少しゆっくり(デフォルトは300)
-	// 	autoplay: {
-	// 		// 自動再生
-	// 		delay: 3500, // 1.5秒後に次のスライド
-	// 		reverseDirection: true,
-	// 	},
-	// 	navigation: {
-	// 		nextEl: ".swiper-button-next", //必須
-	// 		prevEl: ".swiper-button-prev", //必須
-	// 		clickable: true,
-	// 	},
-	// });
+	const slider1 = new Swiper(".mv__swiper", {
+		loop: true,
+		effect: "fade",
+		speed: 3000,
+		allowTouchMove: false,
+		autoplay: {
+			delay: 3000,
+		},
+	});
+
 	const swiper = new Swiper(".js-campaign-swiper", {
 		loop: true,
+		slidesPerView: "auto",
 		spaceBetween: 24,
-		slidesPerView: 1.3,
+		freeModeSticky: true,
+		speed: 2000,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
 		breakpoints: {
 			768: {
-				slidesPerView: 3.5,
+				loop: true,
 				spaceBetween: 40,
-				navigation: {
-					nextEl: ".swiper-button-next", //必須
-					prevEl: ".swiper-button-prev", //必須
-					clickable: true,
-				},
 			},
+		},
+		navigation: {
+			nextEl: ".swiper-button-next", //必須
+			prevEl: ".swiper-button-prev", //必須
 		},
 	});
 
