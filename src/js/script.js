@@ -32,7 +32,6 @@ jQuery(function ($) {
 		},
 		breakpoints: {
 			768: {
-				loop: true,
 				spaceBetween: 40,
 			},
 		},

@@ -23,11 +23,11 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
 		<!-- css -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<!-- JavaScript -->
 		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 		<script src="/assets/js/jquery.inview.min.js"></script>
 		<script defer src="./assets/js/script.js"></script>
 	</head>
@@ -177,14 +177,14 @@
 				<div class="campaign__inner inner">
 					<div class="section-header">
 						<h1 class="section-header__title">Campaign</h1>
-						<p class="section-header__subtitle">キャンペーン</p>
+						<h2 class="section-header__subtitle">キャンペーン</h2>
 					</div>
 					<div class="swiper campaign__swiper js-campaign-swiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide campaign-slide">
+						<ul class="swiper-wrapper campaign__cards">
+							<li class="swiper-slide campaign-slide">
 								<a class="campaign-card">
 									<div class="campaign-card__img">
-										<img src="/assets/images/campaign1.jpg" alt="キャンペーンカード１" />
+										<img src="/assets/images/campaign1.jpg" alt="キャンペーンカード２" />
 									</div>
 									<div class="campaign-card__body">
 										<div class="campaign-card__category">
@@ -201,8 +201,8 @@
 										</div>
 									</div>
 								</a>
-							</div>
-							<div class="swiper-slide campaign-slide">
+							</li>
+							<li class="swiper-slide campaign-slide">
 								<a class="campaign-card">
 									<div class="campaign-card__img">
 										<img src="/assets/images/campaign2.jpg" alt="キャンペーンカード２" />
@@ -222,8 +222,8 @@
 										</div>
 									</div>
 								</a>
-							</div>
-							<div class="swiper-slide campaign-slide">
+							</li>
+							<li class="swiper-slide campaign-slide">
 								<a class="campaign-card">
 									<div class="campaign-card__img">
 										<img src="/assets/images/campaign3.jpg" alt="キャンペーンカード３" />
@@ -243,8 +243,8 @@
 										</div>
 									</div>
 								</a>
-							</div>
-							<div class="swiper-slide campaign-slide">
+							</li>
+							<li class="swiper-slide campaign-slide">
 								<a class="campaign-card">
 									<div class="campaign-card__img">
 										<img src="/assets/images/campaign4.jpg" alt="キャンペーンカード４" />
@@ -264,8 +264,8 @@
 										</div>
 									</div>
 								</a>
-							</div>
-						</div>
+							</li>
+						</ul>
 					</div>
 					<div class="swiper-button-next campaign__card-next"></div>
 					<div class="swiper-button-prev campaign__card-prev"></div>
@@ -279,7 +279,7 @@
 				<div class="about__inner inner">
 					<div class="section-header">
 						<h1 class="section-header__title">About us</h1>
-						<p class="section-header__subtitle">私たちについて</p>
+						<h2 class="section-header__subtitle">私たちについて</h2>
 					</div>
 					<div class="about__item">
 						<div class="about__img-wrap">
@@ -334,7 +334,7 @@
 				<div class="blog__inner inner">
 					<div class="section-header">
 						<h1 class="section-header__title--blog">Blog</h1>
-						<p class="section-header__subtitle--blog">ブログ</p>
+						<h2 class="section-header__subtitle--blog">ブログ</h2>
 					</div>
 					<div class="blog-cards">
 						<a class="blog-card">
@@ -389,7 +389,7 @@
 				<div class="voice__inner inner">
 					<div class="section-header">
 						<h1 class="section-header__title">Voice</h1>
-						<p class="section-header__subtitle">お客様の声</p>
+						<h2 class="section-header__subtitle">お客様の声</h2>
 					</div>
 					<div class="voice-cards">
 						<div class="voice-card">
@@ -448,7 +448,7 @@
 				<div class="price__inner inner">
 					<div class="section-header">
 						<h1 class="section-header__title">Price</h1>
-						<p class="section-header__subtitle">料金一覧</p>
+						<h2 class="section-header__subtitle">料金一覧</h2>
 					</div>
 					<div class="price__item">
 						<div class="colorbox price__colorbox">
@@ -559,7 +559,7 @@
 
 						<div class="section-header--contact">
 							<h1 class="section-header__title--contact">Contact</h1>
-							<p class="section-header__subtitle--contact">お問い合せ</p>
+							<h2 class="section-header__subtitle--contact">お問い合せ</h2>
 							<p class="section-header--contact__text">ご予約・お問い合わせはコチラ</p>
 							<div class="contact__button">
 								<a href="#" class="button"><span>Contact us</span></a>
@@ -577,8 +577,8 @@
 				<div class="footer__flex">
 					<a href="#" class="footer-nav__logo"><img src="/assets/images/footer-logo.jpg" alt="フッターロゴ" /></a>
 					<div class="footer__sns">
-						<a href=""><img src="/assets/images/footerFacebookLogo.jpg" alt="Facebook" /></a>
-						<a href=""><img src="/assets/images/footer-InstagramLogo.jpg" alt="Instagram" /></a>
+						<a href="#" class="footer__facebook"><img src="/assets/images/Facebook-Logo.png" alt="Facebook" /></a>
+						<a href="#" class="footer__instagram"><img src="/assets/images/Instagram-Logo.png" alt="Instagram" /></a>
 					</div>
 				</div>
 				<div class="footer-nav__menu">

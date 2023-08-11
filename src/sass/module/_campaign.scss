@@ -4,6 +4,65 @@
 	position: relative;
 }
 
+.campaign__swiper {
+	margin-top: rem(28);
+	margin-right: calc(50% - 50vw);
+	padding-left: rem(10);
+	margin-left: rem(-10);
+	padding-bottom: rem(10);
+	@include mq(md) {
+		margin-top: rem(40);
+	}
+}
+
+/* 前へ次への矢印カスタマイズ */
+//
+// 前後の矢印
+.campaign__card-prev,
+.campaign__card-next {
+	position: absolute;
+	top: rem(22);
+	opacity: 0;
+	height: rem(80);
+	width: rem(80);
+
+	@include mq("md") {
+		opacity: 1;
+		transition: opacity 0.3s;
+	}
+}
+
+.campaign__card-prev {
+	left: 76.6%;
+}
+
+.campaign__card-next {
+	right: 2.3%;
+}
+
+.campaign__card-prev:after,
+.campaign__card-next:after {
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: rem(80);
+	margin: auto;
+	width: rem(80);
+}
+/* 前への矢印カスタマイズ */
+.campaign__card-prev:after {
+	background-image: url(/assets/images/prev-arrow.png);
+}
+/* 次への矢印カスタマイズ */
+.campaign__card-next:after {
+	background-image: url(/assets/images/next-arrow.png);
+}
+
+.campaign__card-prev:hover,
+.campaign__card-next:hover {
+	opacity: 0.7;
+}
+
 .campaign__button {
 	margin-top: rem(24);
 	text-align: center;
@@ -14,8 +73,14 @@
 
 .campaign-slide {
 	width: rem(280);
+	transition: box-shadow 0.3s, opacity 0.3s;
+	height: auto;
 
 	@include mq(md) {
 		width: rem(333);
 	}
+}
+
+.campaign__card {
+	width: 100%;
 }
