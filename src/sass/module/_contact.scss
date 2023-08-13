@@ -1,8 +1,5 @@
 @use "global" as *;
 
-.contact__inner {
-	// padding-bottom: rem(30);
-}
 .contact {
 	padding-top: rem(85);
 	padding-bottom: rem(100);
@@ -83,10 +80,11 @@
 	height: rem(1);
 	background-color: $accent-color;
 	bottom: rem(-5);
-	left: rem(24);
+	left: calc(50% - 150px);
 	@include mq(md) {
 		width: rem(440);
-		left: rem(-1);
+		left: 0%;
+		bottom: rem(0);
 	}
 }
 
