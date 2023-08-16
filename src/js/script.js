@@ -1,3 +1,28 @@
+// ローディングアニメーション
+const keyName = "visited";
+const keyValue = true;
+
+const openingAnimation = () => {
+	const openingTL = gsap.timeline();
+	openingTL
+		.fromTo(".js-loading-title", { clipPath: "inset(100% 0 0 0)", scale: 1.1, autoAlpha: 0 }, { clipPath: "inset(0% 0 0 0)", scale: 1, autoAlpha: 1, duration: 2, ease: "power4.out", delay: 1 })
+		.fromTo(".js-loading-img", { y: "100%" }, { y: "0%", duration: 2, ease: "power4.out", stagger: 0.1 }, "-=0.5")
+		.to(".js-loading-title", { autoAlpha: 0, duration: 0.8 }, "<")
+		.fromTo(".js-loading-title", { autoAlpha: 0, scale: 0.9 }, { autoAlpha: 1, scale: 1, duration: 1, ease: "power4.in", color: "#fff" }, "-=.5")
+		.fromTo(".js-loading", { autoAlpha: 1 }, { autoAlpha: 0, duration: 1, ease: "power4.in" }, "+=2");
+};
+
+window.addEventListener("DOMContentLoaded", () => {
+	if (!sessionStorage.getItem(keyName)) {
+		// 初回訪問時の処理
+		sessionStorage.setItem(keyName, keyValue);
+		openingAnimation();
+	} else {
+		// 2回目以降の訪問時の処理
+		document.querySelector(".js-loading").style.display = "none";
+	}
+});
+
 jQuery(function ($) {
 	// この中であればWordpressでも「$」が使用可能になる
 	//ナビバートグル
