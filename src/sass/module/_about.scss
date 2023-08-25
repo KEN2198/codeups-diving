@@ -10,7 +10,7 @@
 
 .about__item {
 	position: relative;
-	margin-top: rem(40);
+	margin-top: rem(32);
 	@include mq(md) {
 		position: relative;
 	}
@@ -71,10 +71,12 @@
 	@include mq(md) {
 		display: flex;
 		position: absolute;
-		top: 24.5%;
-		left: 17.518%;
+		top: 23.5%;
+		left: 15.518%;
 		display: flex;
 		z-index: 11;
+		margin-left: rem(19);
+		margin-right: rem(30);
 	}
 }
 
@@ -93,6 +95,7 @@
 		max-width: rem(416);
 		width: 100%;
 		letter-spacing: initial;
+		white-space: nowrap;
 	}
 }
 

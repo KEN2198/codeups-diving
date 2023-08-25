@@ -35,15 +35,16 @@
 		width: 100%;
 		justify-content: initial;
 		height: inherit;
-		padding: rem(0) rem(40);
+		padding-left: rem(40);
+		padding-right: rem(20);
 	}
 }
 
 .header__logo {
-	width: rem(102);
+	max-width: rem(102);
 	height: rem(38);
 	@include mq(md) {
-		width: rem(133);
+		max-width: rem(133);
 		height: rem(50);
 	}
 }

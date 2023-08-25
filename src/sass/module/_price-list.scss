@@ -4,10 +4,6 @@
 	margin-top: rem(40);
 }
 
-.price-list:nth-child(3) {
-	margin-top: rem(30);
-}
-
 .price-list__title {
 	font-size: rem(16);
 	font-weight: $bold;
@@ -16,11 +12,8 @@
 	border-bottom: rem(1) solid $accent-color;
 	padding-bottom: rem(4);
 }
-.price-list__items {
-	margin-top: rem(4);
-}
-
 .price-list__item {
+	// margin-top: rem(4);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

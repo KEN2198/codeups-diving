@@ -1,19 +1,21 @@
 @use "global" as *;
 
 .footer-nav__menu {
-	max-width: rem(375);
+	max-width: rem(500);
 	display: flex;
 	margin-top: rem(18);
 	@include mq(md) {
 		max-width: 100%;
 		margin-top: rem(1);
+		gap: rem(120);
+		justify-content: start;
 	}
 }
 
 .footer-nav__content--right,
 .footer-nav__content--left {
 	@include mq(md) {
-		display: flex;
+		display: contents;
 		align-items: center;
 	}
 }
@@ -35,11 +37,11 @@
 	}
 }
 
-.footer-nav__items--margin {
-	@include mq(md) {
-		margin-left: 120px;
-	}
-}
+// .footer-nav__items--margin {
+// 	@include mq(md) {
+// 		margin-left: 120px;
+// 	}
+// }
 
 .footer-nav__item-link a {
 	display: block;
