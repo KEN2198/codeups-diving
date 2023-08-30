@@ -1,5 +1,4 @@
 @use "global" as *;
-
 .footer {
 	background-color: $accent-color;
 	padding-top: rem(53);
@@ -7,6 +6,13 @@
 	@include mq(md) {
 		padding-top: rem(64);
 		padding-bottom: rem(80);
+	}
+}
+
+.footer__layout {
+	margin-top: rem(100);
+	@include mq(md) {
+		margin-top: rem(160);
 	}
 }
 
