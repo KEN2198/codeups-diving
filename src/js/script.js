@@ -23,18 +23,6 @@ window.addEventListener("DOMContentLoaded", () => {
 	}
 });
 
-// jQuery(function ($) {
-// 	// この中であればWordpressでも「$」が使用可能になる
-// 	//ナビバートグル
-// 	$(".js-hamburger").on("click", function () {
-// 		if ($(".js-hamburger").hasClass("is-open")) {
-// 			$(".js-drawer-menu").fadeOut();
-// 			$(this).removeClass("is-open");
-// 		} else {
-// 			$(".js-drawer-menu").fadeIn();
-// 			$(this).addClass("is-open");
-// 		}
-// 	});
 jQuery(function ($) {
 	// ナビバートグル
 	$(".js-hamburger").on("click", function () {
@@ -86,14 +74,14 @@ jQuery(function ($) {
 			jQuery(".header").removeClass("change-color");
 		}
 	});
-	var box = $(".colorbox"),
+	var box = $(".js-slide-animation"),
 		speed = 700;
 
-	//.colorboxの付いた全ての要素に対して下記の処理を行う
+	//.slide-animationの付いた全ての要素に対して下記の処理を行う
 	box.each(function () {
-		$(this).append('<div class="color"></div>');
-		var color = $(this).find($(".color")),
-			image = $(this).find("img");
+		$(this).append('<div class="slide-animation__bg"></div>');
+		var color = $(this).find($(".slide-animation__bg"));
+		var image = $(this).find(".slide-animation__img");
 		var counter = 0;
 
 		image.css("opacity", "0");
@@ -112,22 +100,4 @@ jQuery(function ($) {
 			}
 		});
 	});
-	// $(function () {
-	// 	// #で始まるアンカーをクリックした場合に処理
-	// 	$('a[href^="#"]').click(function () {
-	// 		// 移動先を50px上にずらす
-	// 		var adjust = 100;
-	// 		// スクロールの速度
-	// 		var speed = 400; // ミリ秒
-	// 		// アンカーの値取得
-	// 		var href = $(this).attr("href");
-	// 		// 移動先を取得
-	// 		var target = $(href == "#" || href == "" ? "html" : href);
-	// 		// 移動先を調整
-	// 		var position = target.offset().top - adjust;
-	// 		// スムーススクロール
-	// 		$("body,html").animate({ scrollTop: position }, speed, "swing");
-	// 		return false;
-	// 	});
-	// });
 });

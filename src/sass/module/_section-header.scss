@@ -27,7 +27,7 @@
 	}
 }
 
-.section-header__title--contact {
+.section-header__title.section-header__title--contact {
 	font-size: rem(80);
 	line-height: 1;
 	font-family: $en-font-family;
@@ -100,6 +100,14 @@
 	margin-top: rem(4);
 	@include mq(md) {
 		margin-top: rem(8);
+		color: $white;
+	}
+}
+
+.section-header__title.section-header__title--blog,
+.section-header__title.section-header__title--blog::first-letter,
+.section-header__subtitle.section-header__subtitle--blog {
+	@include mq("md") {
 		color: $white;
 	}
 }

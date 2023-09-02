@@ -24,7 +24,6 @@
 
 .campaign-card__img img {
 	width: 100%;
-	// height: 100%;
 	object-fit: cover;
 }
 
@@ -97,7 +96,7 @@
 	}
 }
 
-.campaign-card__price--black {
+.campaign-card__price-black {
 	font-size: rem(20);
 	font-weight: $bold;
 	line-height: 1;
@@ -108,7 +107,7 @@
 	}
 }
 
-.campaign-card__price--black span {
+.campaign-card__price-black span {
 	position: absolute;
 	width: rem(76);
 	height: rem(3);
@@ -120,7 +119,7 @@
 	}
 }
 
-.campaign-card__price--accect {
+.campaign-card__price-accent {
 	font-size: rem(32);
 	font-weight: $bold;
 	line-height: 1;

@@ -1,5 +1,10 @@
 @use "global" as *;
 
+.mv {
+	height: 100vh;
+	width: 100%;
+}
+
 .mv__inner {
 	position: relative;
 	width: 100%;
@@ -7,77 +12,16 @@
 	z-index: 100;
 }
 
-.mv {
-	// position: relative;
-	height: 100vh;
-	background-image: url(/assets/images/sp-mv-diving.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	width: 100%;
-	object-fit: cover;
-	@include mq(md) {
-		background-image: url(/assets/images/pc-mv1-1.jpg);
-		object-fit: cover;
-		background-size: cover;
-		background-position: center;
-	}
+.mv__swiper {
+	height: inherit;
 }
 
-.mv2 {
-	// position: relative;
-	height: 100vh;
-	background-image: url(/assets/images/sp-mv2.jpg);
-	// background-position: top 200px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-
-	width: 100%;
+.mv__swiper-wrapper,
+.mv__swiper-slide,
+.mv__swiper-slide picture,
+.mv__swiper-slide img {
+	height: inherit;
 	object-fit: cover;
-	@include mq(md) {
-		background-image: url(/assets/images/pc-mv2.jpg);
-		background-size: cover;
-		background-position: center;
-		object-fit: cover;
-	}
-}
-
-.mv3 {
-	// position: relative;
-	height: 100vh;
-	background-image: url(/assets/images/sp-mv3.jpg);
-	// background-position: top 200px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	width: 100%;
-	object-fit: cover;
-	@include mq(md) {
-		background-image: url(/assets/images/pc-mv3.jpg);
-		background-size: cover;
-		background-position: center;
-		object-fit: cover;
-	}
-}
-
-.mv4 {
-	// position: relative;
-	height: 100vh;
-	background-image: url(/assets/images/sp-mv4.jpg);
-	// background-position: top 200px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-
-	width: 100%;
-	object-fit: cover;
-	@include mq(md) {
-		background-image: url(/assets/images/pc-mv4.jpg);
-		background-size: cover;
-		background-position: center;
-		object-fit: cover;
-	}
 }
 
 .mv__content {
@@ -86,6 +30,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	z-index: 101;
 	@include mq(md) {
 		top: 55%;
 		left: 50%;
