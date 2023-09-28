@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.sub-mv {
+	width: 100%;
+	height: rem(460);
+	@include mq(md) {
+		height: rem(548);
+	}
+}
+
+.sub-mv__inner {
+	height: inherit;
+	position: relative;
+	width: 100%;
+	z-index: 100;
+}
+
+.sub-mv__img,
+.sub-mv__img picture,
+.sub-mv__img img {
+	height: inherit;
+	object-fit: cover;
+}
+
+.sub-mv__content {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@include mq(md) {
+		top: 59%;
+	}
+}
+
+.sub-mv__title {
+	color: $white;
+	font-family: $price-font-family;
+	font-size: rem(40);
+	font-weight: $normal;
+	line-height: 1;
+	font-style: normal;
+	white-space: nowrap;
+	@include mq(md) {
+		font-size: rem(80);
+		line-height: calc(100 / 80);
+	}
+}

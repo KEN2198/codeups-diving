@@ -1,0 +1,56 @@
+@use "global" as *;
+
+.page-404 {
+	padding-top: rem(80);
+	padding-bottom: rem(40);
+	background-color: $accent-color;
+	background-image: url(/assets/images/404-bg.png);
+	background-repeat: no-repeat;
+	background-size: rem(345);
+	background-position: bottom;
+	color: $white;
+	@include mq(md) {
+		padding-top: rem(90);
+		padding-bottom: rem(148);
+		background-size: rem(700);
+		background-position-x: calc(50% - min(48%, rem(193)));
+		background-position-y: rem(90);
+	}
+}
+
+.page-404__contents {
+	text-align: center;
+	margin-top: rem(40);
+	@include mq(md) {
+		margin-top: rem(95);
+	}
+}
+
+.page-404__title {
+	font-size: rem(80);
+	font-family: $price-font-family;
+	letter-spacing: rem(40);
+	text-indent: rem(40);
+	font-weight: $normal;
+	@include mq(md) {
+		font-size: rem(160);
+		letter-spacing: rem(80);
+		text-indent: rem(80);
+	}
+}
+
+.page-404__text {
+	font-size: rem(16);
+	font-weight: $normal;
+	line-height: calc(24 / 16);
+	font-family: $price-font-family;
+	text-align: center;
+}
+
+.page-404__button {
+	text-align: center;
+	margin-top: rem(20);
+	@include mq(md) {
+		margin-top: rem(80);
+	}
+}

@@ -1,0 +1,91 @@
+@use "global" as *;
+
+.terms-of-service__inner {
+	position: relative;
+}
+
+.terms-of-service__inner::after {
+	position: absolute;
+	content: "";
+	background-image: url(/assets/images/page-kingyohanadai.png);
+	width: rem(120);
+	height: rem(55);
+	top: rem(-24);
+	left: calc(50% - (min(46.062vw, rem(620))));
+	background-repeat: no-repeat;
+	background-size: contain;
+	@include mq(md) {
+		width: rem(301);
+		height: rem(138);
+		top: rem(-72);
+	}
+}
+
+.terms-of-service__contents {
+	margin-top: rem(52);
+	@include mq("md") {
+		margin-top: rem(150);
+	}
+}
+
+.terms-of-service__contents-inner {
+	max-width: rem(520);
+	width: 100%;
+	margin-inline: auto;
+	margin-top: rem(24);
+	@include mq("md") {
+		max-width: rem(800);
+	}
+}
+
+.terms-of-service__title {
+	font-size: rem(24);
+	font-weight: $regular;
+	@include mq("md") {
+		font-size: rem(32);
+	}
+}
+
+.terms-of-service__description-1 {
+	margin-top: rem(39);
+	font-size: rem(16);
+	line-height: 2;
+}
+
+.terms-of-service__description-2 {
+	margin-top: rem(31);
+	font-size: rem(16);
+	line-height: 2;
+}
+
+.terms-of-service__items {
+	list-style: decimal;
+}
+
+.terms-of-service__items {
+	margin-top: rem(31);
+}
+
+.terms-of-service__items-inner {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.terms-of-service__items-inner span {
+	display: block;
+	font-size: rem(16);
+	line-height: 2;
+}
+
+.terms-of-service__item {
+	margin-left: rem(24);
+	font-size: rem(16);
+	line-height: 2;
+}
+
+.terms-of-service__contact {
+	margin-top: rem(102);
+	@include mq(md) {
+		margin-top: rem(137);
+	}
+}

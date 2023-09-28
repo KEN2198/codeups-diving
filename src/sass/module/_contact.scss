@@ -178,18 +178,3 @@
 	text-align: center;
 	margin-top: rem(40);
 }
-
-.contact__to-top a {
-	display: inline-block;
-	position: absolute;
-	width: rem(48);
-	height: rem(48);
-	right: rem(15);
-	margin-top: rem(40);
-	@include mq(md) {
-		width: rem(80);
-		height: rem(80);
-		right: rem(20);
-		bottom: -35%;
-	}
-}

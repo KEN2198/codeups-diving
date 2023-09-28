@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.page-contact__inner {
+	position: relative;
+}
+
+.page-contact__inner::after {
+	position: absolute;
+	content: "";
+	background-image: url(/assets/images/page-kingyohanadai.png);
+	width: rem(120);
+	height: rem(55);
+	top: rem(-24);
+	left: calc(50% - (min(46.062vw, rem(620))));
+	background-repeat: no-repeat;
+	background-size: contain;
+	@include mq(md) {
+		width: rem(301);
+		height: rem(138);
+		top: rem(-56);
+	}
+}
+
+.page-contact__items {
+	margin-top: rem(52);
+	@include mq(md) {
+		margin-top: rem(132);
+	}
+}

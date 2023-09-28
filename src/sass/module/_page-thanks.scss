@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.page-thanks__inner {
+	position: relative;
+}
+
+.page-thanks__inner::after {
+	position: absolute;
+	content: "";
+	background-image: url(/assets/images/page-kingyohanadai.png);
+	width: rem(120);
+	height: rem(55);
+	top: rem(-24);
+	left: calc(50% - (min(46.062vw, rem(620))));
+	background-repeat: no-repeat;
+	background-size: contain;
+	@include mq(md) {
+		width: rem(301);
+		height: rem(138);
+		top: rem(-72);
+	}
+}
+
+.page-thanks__message {
+	font-size: rem(16);
+	font-weight: $normal;
+	line-height: calc(18 / 16);
+	text-align: center;
+	margin-top: rem(52);
+	@include mq(md) {
+		margin-top: rem(150);
+	}
+}
+
+.page-thanks__text {
+	text-align: center;
+	margin-top: rem(40);
+	line-height: 1.4;
+}

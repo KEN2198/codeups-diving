@@ -1,0 +1,82 @@
+@use "global" as *;
+
+.accordion__contents {
+	display: grid;
+	gap: rem(42);
+	margin-top: rem(52);
+	@include mq(md) {
+		max-width: rem(700);
+		width: 100%;
+		margin: auto;
+		margin-top: rem(150);
+		gap: rem(46);
+	}
+}
+
+.accordion__menu {
+	cursor: pointer;
+	border: rem(1) solid $accent-color;
+	@include mq(md) {
+		border: initial;
+	}
+}
+
+.accordion__question {
+	padding: rem(16);
+	color: $white;
+	background-color: $accent-color;
+	position: relative;
+	@include mq(md) {
+		padding: rem(26) rem(40);
+		font-size: rem(20);
+		font-weight: $normal;
+	}
+}
+
+.accordion__question::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: rem(16);
+	width: rem(28);
+	height: rem(1);
+	background: $white;
+	transform: translateY(-50%);
+	transition: all 0.3s ease;
+	@include mq(md) {
+		width: rem(32);
+		right: rem(40);
+	}
+}
+
+.accordion__question::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: rem(16);
+	width: rem(28);
+	height: rem(1);
+	background: $white;
+	@include mq(md) {
+		width: rem(32);
+		right: rem(40);
+	}
+}
+
+.accordion__answer {
+	padding: rem(18) rem(16);
+	font-size: rem(16);
+	font-weight: $normal;
+	@include mq(md) {
+		border: rem(1) solid $accent-color;
+		margin-top: rem(16);
+		padding: rem(33) rem(40);
+	}
+}
+
+.accordion__menu.js-open {
+	.accordion__question::before {
+		transform: translateY(-50%) rotate(-90deg);
+	}
+}

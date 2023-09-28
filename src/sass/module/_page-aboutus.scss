@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.page-aboutus__inner {
+	position: relative;
+}
+
+.page-aboutus__inner::after {
+	position: absolute;
+	content: "";
+	background-image: url(/assets/images/page-kingyohanadai.png);
+	width: rem(120);
+	height: rem(55);
+	top: rem(-5);
+	left: calc(50% - (min(46.062vw, rem(620))));
+	background-repeat: no-repeat;
+	background-size: contain;
+	@include mq(md) {
+		width: rem(301);
+		height: rem(138);
+		top: rem(-72);
+		left: calc(50% - (min(48.062vw, rem(620))));
+	}
+}
+
+.page-aboutus__item.about__item {
+	@include mq(md) {
+		margin-top: rem(150);
+	}
+}
+
+.page-aboutus__item.about__item::after {
+	@include mq(md) {
+		position: absolute;
+		content: "";
+		bottom: rem(-177);
+		right: calc(50% - (min(48.111vw, rem(637))));
+		width: rem(301);
+		height: rem(138);
+		background-image: url(/assets/images/page-aboutus-kingyohanadai.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		z-index: 20;
+	}
+}
+
+.page-aboutus__contact {
+	margin-top: rem(106);
+	@include mq(md) {
+		margin-top: rem(123);
+	}
+}

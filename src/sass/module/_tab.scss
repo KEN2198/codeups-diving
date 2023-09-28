@@ -1,0 +1,176 @@
+@use "global" as *;
+
+.tab {
+}
+
+.tab__inner {
+	max-width: rem(500);
+	width: 100%;
+	margin: auto;
+	@include mq("md") {
+		max-width: initial;
+		margin: initial;
+	}
+}
+
+.tab__items {
+	margin-top: rem(120);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: rem(20);
+	@include mq(md) {
+		gap: rem(90);
+		margin-top: rem(150);
+	}
+}
+
+.tab__item {
+	display: inline-block;
+	color: $accent-color;
+	background-color: #ddf0f1;
+	box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+	padding: rem(10);
+	text-align: center;
+	font-size: rem(14);
+	font-weight: $normal;
+	cursor: pointer;
+	@include mq(md) {
+		padding: rem(29) rem(30) rem(26) rem(35);
+		box-shadow: none;
+		font-size: rem(24);
+		position: relative;
+		text-align: right;
+		max-width: rem(300);
+		width: 100%;
+	}
+}
+
+.tab__item.tab2 {
+	display: inline-block;
+	color: $accent-color;
+	background-color: #ddf0f1;
+	box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+	padding: rem(10);
+	text-align: center;
+	font-size: rem(14);
+	font-weight: $normal;
+	cursor: pointer;
+	@include mq(md) {
+		padding: rem(29) rem(30) rem(26) rem(88);
+		box-shadow: none;
+		font-size: rem(24);
+		position: relative;
+		text-align: right;
+		max-width: rem(300);
+		width: 100%;
+		white-space: nowrap;
+	}
+}
+
+.tab1::before {
+	@include mq(md) {
+		position: absolute;
+		content: "";
+		background-image: url(/assets/images/tab1-green.png);
+		background-position: center center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		aspect-ratio: 1 / 1;
+		top: 76%;
+		left: calc(50% - (min(46.062vw, rem(121))));
+		transform: translateY(-90%);
+		max-width: rem(64);
+		width: 100%;
+		height: rem(64);
+	}
+}
+
+.tab1.is-active::before {
+	@include mq(md) {
+		position: absolute;
+		content: "";
+		background-image: url(/assets/images/tab1.png);
+		background-position: center center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		top: 76%;
+		left: calc(50% - (min(46.062vw, rem(121))));
+		transform: translateY(-90%);
+		max-width: rem(64);
+		width: 100%;
+		height: rem(64);
+	}
+}
+
+.tab2::before {
+	@include mq(md) {
+		position: absolute;
+		content: "";
+		background-image: url(/assets/images/tab2.png);
+		background-position: center center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		top: 76%;
+		left: calc(50% - (min(46.062vw, rem(133))));
+		transform: translateY(-90%);
+		max-width: rem(64);
+		width: 100%;
+		height: rem(64);
+	}
+}
+
+.tab2.is-active:before {
+	@include mq(md) {
+		position: absolute;
+		content: "";
+		background-image: url(/assets/images/tab2-white.png);
+		background-position: center center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		top: 76%;
+		left: calc(50% - (min(46.062vw, rem(133))));
+		transform: translateY(-90%);
+		max-width: rem(64);
+		width: 100%;
+		height: rem(64);
+	}
+}
+
+.tab3::before {
+	@include mq(md) {
+		position: absolute;
+		content: "";
+		background-image: url(/assets/images/tab3.png);
+		background-position: center center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		top: 76%;
+		left: calc(50% - (min(46.062vw, rem(121))));
+		transform: translateY(-90%);
+		max-width: rem(64);
+		width: 100%;
+		height: rem(64);
+	}
+}
+
+.tab3.is-active::before {
+	@include mq(md) {
+		position: absolute;
+		content: "";
+		background-image: url(/assets/images/tab3-white.png);
+		background-position: center center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		top: 76%;
+		left: calc(50% - (min(46.062vw, rem(121))));
+		transform: translateY(-90%);
+		max-width: rem(64);
+		width: 100%;
+		height: rem(64);
+	}
+}
+
+.tab__item.is-active {
+	color: $white;
+	background-color: $accent-color;
+}

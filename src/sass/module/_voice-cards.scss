@@ -14,3 +14,10 @@
 		gap: rem(40);
 	}
 }
+
+.voice-cards--page-voice {
+	@include mq(md) {
+		column-gap: rem(40);
+		row-gap: rem(87);
+	}
+}

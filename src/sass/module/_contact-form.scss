@@ -1,0 +1,347 @@
+@use "global" as *;
+
+.contact-form__row {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	border-bottom: rem(2) dotted $accent-color;
+	padding-bottom: rem(20);
+	padding-top: rem(20);
+	@include mq(md) {
+		flex-wrap: nowrap;
+		max-width: rem(700);
+		margin: auto;
+		padding-bottom: rem(38);
+		padding-top: rem(20);
+	}
+}
+
+.contact-form__row:first-of-type {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	border-bottom: rem(2) dotted $accent-color;
+	padding-bottom: rem(24);
+	padding-top: rem(0);
+	@include mq(md) {
+		flex-wrap: nowrap;
+		max-width: rem(700);
+		margin: auto;
+		padding-bottom: rem(40);
+		padding-top: rem(0);
+	}
+}
+
+.contact-form__row.ai-start {
+	@include mq(md) {
+		align-items: flex-start;
+		padding-top: rem(40);
+		padding-bottom: rem(45);
+	}
+}
+
+.contact-form__row.ai-start-contact {
+	@include mq(md) {
+		align-items: flex-start;
+		padding-top: rem(20);
+		padding-bottom: rem(32);
+	}
+}
+
+.contact-form__head {
+	font-size: rem(16);
+	font-weight: $bold;
+	width: 100%;
+	@include mq(md) {
+		max-width: rem(220);
+	}
+}
+
+.must {
+	position: relative;
+	display: inline-block;
+}
+
+.must::after {
+	position: absolute;
+	white-space: nowrap;
+	background-color: #c94800;
+	font-size: rem(12);
+	font-weight: $normal;
+	letter-spacing: rem(4.8);
+	padding: rem(2) rem(15);
+	color: $white;
+	content: "必須";
+	top: 50%;
+	transform: translateY(-50%);
+	left: calc(100% + rem(8));
+}
+
+.contact-form__data {
+	width: 100%;
+	@include mq(md) {
+		max-width: rem(480);
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	margin-top: rem(16);
+	width: 100%;
+	height: auto;
+	padding: rem(8) rem(16);
+	font-size: rem(16);
+	font-weight: $normal;
+	background: $white;
+	border: rem(1) solid $accent-color;
+	outline: none; //focus時の枠線を消しておく
+	&:focus {
+		//入力をしているとき
+		outline: 1px solid #000;
+	}
+	&::placeholder {
+		color: #ddf0f1;
+	}
+}
+
+.contact-form__checkbox {
+	margin-top: rem(19);
+	display: flex;
+	flex-direction: column;
+	gap: rem(4);
+	@include mq(md) {
+		align-items: flex-start;
+		margin-top: rem(0);
+	}
+}
+
+.contact-form__checkbox span {
+	display: inline-block;
+	padding-left: rem(22);
+	font-size: rem(16);
+	font-weight: $normal;
+	position: relative;
+}
+
+.contact-form__checkbox span::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	width: rem(14);
+	height: rem(14);
+	border: rem(1) solid $accent-color;
+}
+
+.contact-form__checkbox span::after {
+	content: "";
+	position: absolute;
+	top: calc(50% - 1px);
+	transform: translateY(-50%) rotate(52deg);
+	left: rem(5);
+	width: rem(5);
+	height: rem(9);
+	border-right: 2px solid #c94800;
+	border-bottom: 2px solid #c94800;
+	opacity: 0;
+}
+
+input[type="checkbox"]:checked + span::after {
+	opacity: 1;
+}
+
+.contact-form__select {
+	position: relative;
+}
+
+.contact-form__select::after {
+	content: "";
+	position: absolute;
+	top: 60%;
+	right: 10px;
+	transform: translateY(-50%);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+	border-top: 12px solid $accent-color;
+	border-bottom: 0;
+	pointer-events: none;
+}
+
+.contact-form__select select {
+	margin-top: rem(16);
+	width: 100%;
+	border: rem(1) solid $accent-color;
+	padding: rem(12) rem(8);
+	font-size: rem(12);
+	font-weight: $normal;
+}
+
+textarea {
+	height: rem(200);
+	resize: vertical; //自分でサイズを変えられるように
+	@include mq(md) {
+		margin-top: rem(0);
+	}
+}
+
+.contact-form__confirm {
+	margin-top: rem(40);
+	@include mq("md") {
+		margin-top: rem(80);
+	}
+}
+
+.contact-form__confirm-inner {
+	max-width: 85%;
+	width: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.contact-form__confirm-block {
+	margin-left: rem(8);
+	@include mq("md") {
+		margin-left: rem(16);
+	}
+}
+
+.contact-form__confirm label {
+	font-size: rem(14);
+	line-height: calc(22 / 14);
+}
+
+.contact-form__confirm input[type="checkbox"] {
+	display: block;
+	width: rem(22);
+	height: rem(22);
+	border: 1px solid $accent-color;
+	display: inline-flex;
+	vertical-align: text-top;
+	cursor: pointer;
+	margin-top: rem(3);
+}
+
+.contact-form__confirm input[type="checkbox"] {
+	position: relative;
+}
+
+.contact-form__confirm input[type="checkbox"]::after {
+	content: "";
+	display: block;
+	position: absolute;
+	border-bottom: rem(3) solid #c94800;
+	border-left: rem(3) solid #c94800;
+	opacity: 0;
+	height: rem(6);
+	width: rem(10);
+	top: 20%;
+	left: 50%;
+	transform: rotate(-45deg) translate(-50%, -50%);
+}
+
+.contact-form__confirm input[type="checkbox"]:checked::after {
+	opacity: 1; /*チェック後表示*/
+}
+
+.contact-form__button {
+	text-align: center;
+	margin-top: rem(20);
+	@include mq(md) {
+		margin-top: rem(40);
+	}
+}
+
+.form__button {
+	display: inline-block;
+	max-width: rem(206);
+	width: 100%;
+	background-color: $accent-color;
+	color: $white;
+	padding: rem(16);
+	padding-right: rem(48);
+	padding-left: rem(0);
+	font-size: rem(14);
+	font-weight: $normal;
+	font-family: $en-font-family;
+	line-height: calc(22 / 14);
+	letter-spacing: 0.06em;
+	text-transform: capitalize;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+}
+
+.form__button::after {
+	background: $white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: rem(1) solid $accent-color;
+	content: "";
+	width: 100%;
+	height: 100%;
+	transform: scale(0, 1);
+	transform-origin: left top;
+	transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+	z-index: -1;
+}
+
+.form__button:hover {
+	color: $accent-color;
+}
+.form__button:hover::after {
+	transform: scale(1, 1);
+}
+
+.form__button::before {
+	position: absolute;
+	content: "";
+	background-image: url(/assets/images/button-arrow-white.png);
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	top: 50%;
+	left: 55%;
+	transform: translateY(-90%);
+	max-width: rem(40);
+	width: 100%;
+	height: rem(8);
+}
+
+.form__button:hover::before {
+	position: absolute;
+	content: "";
+	background-image: url(/assets/images/button-arrow-active.png);
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	top: 50%;
+	left: 55%;
+	transform: translateY(-90%);
+	max-width: rem(40);
+	width: 100%;
+	height: rem(8);
+}
+
+.form__button span {
+	position: relative; /* 要素に position: relative; を追加 */
+}
+
+.form__button span::after {
+	content: "";
+	border: rem(1) solid $accent-color;
+	position: absolute;
+	top: rem(-12);
+	right: rem(-118);
+	left: rem(-92);
+	width: rem(204);
+	height: rem(54);
+	z-index: -1;
+}

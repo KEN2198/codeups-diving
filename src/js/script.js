@@ -22,6 +22,44 @@ window.addEventListener("DOMContentLoaded", () => {
 		document.querySelector(".js-loading").style.display = "none";
 	}
 });
+// トップへ戻るボタン
+$(window).on("scroll", function () {
+	let scrollHeight = $(document).height();
+	let scrollPosition = $(window).height() + $(window).scrollTop();
+	let footHeight = $("footer").innerHeight();
+	if (scrollHeight - scrollPosition <= footHeight) {
+		$(".js-page-top").css({
+			position: "absolute",
+			bottom: footHeight + 19,
+		});
+	} else {
+		$(".js-page-top").css({
+			position: "fixed",
+			bottom: "19px",
+		});
+		9;
+	}
+});
+
+let topBtn = $("#page-top");
+topBtn.hide();
+$(window).scroll(function () {
+	if ($(this).scrollTop() > 200) {
+		topBtn.fadeIn();
+	} else {
+		topBtn.fadeOut();
+	}
+});
+topBtn.click(function () {
+	$("body,html").animate(
+		{
+			scrollTop: 0,
+		},
+		500,
+		"swing"
+	);
+	return false;
+});
 
 jQuery(function ($) {
 	// ナビバートグル
@@ -98,6 +136,38 @@ jQuery(function ($) {
 					});
 				counter = 1;
 			}
+		});
+	});
+	$(".gallery__item").on("click", function () {
+		$($(this).attr("href")).fadeIn(100);
+		$($(this).attr("href")).next(".modal-container").fadeIn(100);
+		return false;
+	});
+
+	$(".modal-bg").on("click", function () {
+		$(this).fadeOut(100);
+		$(this).next(".modal-container").fadeOut(100);
+		return false;
+	});
+	$(function () {
+		$(".tab__item:first-of-type").css("display", "inline-block");
+		$(".tab__item").on("click", function () {
+			$(".is-active").removeClass("is-active");
+			$(this).addClass("is-active");
+			const index = $(this).index();
+			$(".information-card").hide().eq(index).fadeIn(300);
+		});
+	});
+	$(".tab__item").on("click", function () {
+		$(".information-card").removeClass("js-open");
+		$($(this).children("a").attr("href")).addClass("js-open");
+		return false;
+	});
+	jQuery(function ($) {
+		$(".accordion__menu").on("click", function () {
+			$(this).toggleClass("js-open");
+			$(this).children(".accordion__answer").slideToggle();
+			return false;
 		});
 	});
 });

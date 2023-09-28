@@ -21,3 +21,11 @@
 		row-gap: rem(80);
 	}
 }
+
+.blog-cards--2colums {
+	margin-top: rem(52);
+	@include mq(md) {
+		grid-template-columns: repeat(2, 1fr);
+		margin-top: rem(150);
+	}
+}

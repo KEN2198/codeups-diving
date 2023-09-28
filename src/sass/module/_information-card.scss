@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.information-card {
+	display: none;
+	&.js-open {
+		display: block;
+	}
+}
+
+.information-card__body {
+	padding: rem(24);
+	border: rem(1) solid $accent-color;
+	margin-top: rem(16);
+	@include mq(md) {
+		margin-top: rem(24);
+	}
+}
+
+.information-card__wrap {
+	@include mq(md) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: rem(1080);
+		gap: rem(48);
+	}
+}
+
+.information-card__item-left {
+	@include mq(md) {
+		width: 91%;
+	}
+}
+
+.information-card__title {
+	font-size: rem(24);
+	font-weight: $bold;
+	line-height: 1;
+	border-bottom: rem(1) solid $accent-color;
+	padding-bottom: rem(5);
+}
+
+.information-card__text {
+	font-size: rem(16);
+	line-height: calc(24 / 16);
+	margin-top: rem(8);
+}
+
+.information-card__item-right {
+	@include mq(md) {
+	}
+}
+
+.information-card__img {
+	margin-top: rem(8);
+	aspect-ratio: 297 / 189;
+	@include mq(md) {
+		aspect-ratio: 492 / 313;
+		margin-top: rem(0);
+	}
+}
+
+.information-card__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
