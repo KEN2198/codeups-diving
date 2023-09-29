@@ -119,7 +119,7 @@ jQuery(function ($) {
 	box.each(function () {
 		$(this).append('<div class="slide-animation__bg"></div>');
 		var color = $(this).find($(".slide-animation__bg"));
-		var image = $(this).find(".slide-animation__img");
+		var image = $(this).find("img");
 		var counter = 0;
 
 		image.css("opacity", "0");

@@ -64,36 +64,36 @@
 					<div class="sp-nav__flex">
 						<div class="sp-nav__content">
 							<ul class="sp-nav__items">
-								<li class="sp-nav__item-link"><a href="page-campaign.html">キャンペーン</a></li>
+								<li class="sp-nav__item sp-nav__item--icon"><a href="page-campaign.html">キャンペーン</a></li>
 								<li class="sp-nav__item"><a href="#">ライセンス取得</a></li>
 								<li class="sp-nav__item"><a href="#">貸切体験ダイビング</a></li>
 								<li class="sp-nav__item"><a href="#">ナイトダイビング</a></li>
-								<li class="sp-nav__item-link"><a href="#">私たちについて</a></li>
+								<li class="sp-nav__item sp-nav__item--icon"><a href="page-aboutus.html">私たちについて</a></li>
 							</ul>
 							<ul class="sp-nav__items">
-								<li class="sp-nav__item-link"><a href="page-information.html">ダイビング情報</a></li>
+								<li class="sp-nav__item sp-nav__item--icon"><a href="page-information.html">ダイビング情報</a></li>
 								<li class="sp-nav__item"><a href="#">ライセンス講習</a></li>
 								<li class="sp-nav__item"><a href="#">体験ダイビング</a></li>
 								<li class="sp-nav__item"><a href="#">ファンダイビング</a></li>
-								<li class="sp-nav__item-link"><a href="#">ブログ</a></li>
+								<li class="sp-nav__item sp-nav__item--icon"><a href="page-blog.html">ブログ</a></li>
 							</ul>
 						</div>
 						<div class="sp-nav__content">
 							<ul class="sp-nav__items">
-								<li class="sp-nav__item-link"><a href="page-voice.html">お客様の声</a></li>
-								<li class="sp-nav__item-link"><a href="page-price.html">料金一覧</a></li>
+								<li class="sp-nav__item sp-nav__item--icon"><a href="page-voice.html">お客様の声</a></li>
+								<li class="sp-nav__item sp-nav__item--icon"><a href="page-price.html">料金一覧</a></li>
 								<li class="sp-nav__item"><a href="#">ライセンス講習</a></li>
 								<li class="sp-nav__item"><a href="#">体験ダイビング</a></li>
 								<li class="sp-nav__item"><a href="#">ファンダイビング</a></li>
-								<li class="sp-nav__item-link"><a href="page-faq.html">よくある質問</a></li>
+								<li class="sp-nav__item sp-nav__item--icon"><a href="page-faq.html">よくある質問</a></li>
 							</ul>
 							<ul class="sp-nav__items">
-								<li class="sp-nav__item-link">
+								<li class="sp-nav__item sp-nav__item--icon">
 									<a href="page-privacy.html">プライバシー<br />ポリシー</a>
 								</li>
-								<li class="sp-nav__item-link"><a href="page-terms-of-service.html">利用規約</a></li>
-								<li class="sp-nav__item-link"><a href="page-contact.html">おい問わ合せ</a></li>
-								<li class="sp-nav__item-link"><a href="page-sitemap.html">サイトマップ</a></li>
+								<li class="sp-nav__item sp-nav__item--icon"><a href="page-terms-of-service.html">利用規約</a></li>
+								<li class="sp-nav__item sp-nav__item--icon"><a href="page-contact.html">おい問わ合せ</a></li>
+								<li class="sp-nav__item sp-nav__item--icon"><a href="page-sitemap.html">サイトマップ</a></li>
 							</ul>
 						</div>
 					</div>
@@ -197,8 +197,8 @@
 			</div>
 			<section id="Campaign" class="campaign top-campaign">
 				<div class="campaign__inner inner">
-					<div class="section-header">
-						<p class="campaign__heading section-header__title">Campaign</p>
+					<div class="campaign__heading section-header">
+						<p class="section-header__title">Campaign</p>
 						<h2 class="section-header__subtitle">キャンペーン</h2>
 					</div>
 					<div class="swiper campaign__swiper js-campaign-swiper">
@@ -334,7 +334,7 @@
 					</div>
 					<div class="information__item">
 						<div class="information__img slide-animation js-slide-animation">
-							<img class="slide-animation__img" src="/assets/images/information.jpg" alt="魚の写真" />
+							<img src="/assets/images/information.jpg" alt="魚の写真" />
 						</div>
 
 						<div class="information__info">
@@ -354,7 +354,7 @@
 						<h2 class="section-header__subtitle section-header__subtitle--blog">ブログ</h2>
 					</div>
 					<div class="blog__cards blog-cards">
-						<a class="blog-cards__item blog-card">
+						<a href="single-blog.html" class="blog-cards__item blog-card">
 							<div class="blog-card__img">
 								<img src="/assets/images/blog1.jpg" alt="イソギンチャクの写真" />
 							</div>
@@ -420,7 +420,7 @@
 								</div>
 
 								<div class="voice-card__img slide-animation js-slide-animation">
-									<img class="slide-animation__img" src="/assets/images/voice1.jpg" alt="女性の写真" />
+									<img src="/assets/images/voice1.jpg" alt="女性の写真" />
 								</div>
 							</div>
 							<div class="voice-card__body">
@@ -441,7 +441,7 @@
 									<h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
 								</div>
 								<div class="voice-card__img slide-animation js-slide-animation">
-									<img class="slide-animation__img" src="/assets/images/voice2.jpg" alt="男性の写真" />
+									<img src="/assets/images/voice2.jpg" alt="男性の写真" />
 								</div>
 							</div>
 							<div class="voice-card__body">
@@ -468,7 +468,7 @@
 						<div class="price__img slide-animation js-slide-animation">
 							<picture>
 								<source media="(min-width: 768px)" srcset="/assets/images/priceimg.jpg" />
-								<img class="slide-animation__img" src="/assets/images/price.jpg" alt="海中の写真" />
+								<img src="/assets/images/price.jpg" alt="海中の写真" />
 							</picture>
 						</div>
 
@@ -555,7 +555,7 @@
 						<div class="contact__heading section-header section-header--contact">
 							<p class="section-header__title section-header__title--contact">Contact</p>
 							<h2 class="section-header__subtitle section-header__subtitle--contact">お問い合せ</h2>
-							<p class="section-header--contact__text">ご予約・お問い合わせはコチラ</p>
+							<p class="section-header__contact-text">ご予約・お問い合わせはコチラ</p>
 							<div class="contact__button">
 								<a href="page-contact.html" class="button"><span>Contact us</span></a>
 							</div>
@@ -576,36 +576,36 @@
 				<div class="footer__menu">
 					<div class="footer__content-right">
 						<ul class="footer__items">
-							<li class="footer__item-link"><a href="page-campaign.html">キャンペーン</a></li>
+							<li class="footer__item footer__item--icon"><a href="page-campaign.html">キャンペーン</a></li>
 							<li class="footer__item"><a href="#">ライセンス取得</a></li>
 							<li class="footer__item"><a href="#">貸切体験ダイビング</a></li>
 							<li class="footer__item"><a href="#">ナイトダイビング</a></li>
-							<li class="footer__item-link"><a href="page-aboutus.html">私たちについて</a></li>
+							<li class="footer__item footer__item--icon"><a href="page-aboutus.html">私たちについて</a></li>
 						</ul>
 						<ul class="footer__items">
-							<li class="footer__item-link"><a href="page-information.html">ダイビング情報</a></li>
+							<li class="footer__item footer__item--icon"><a href="page-information.html">ダイビング情報</a></li>
 							<li class="footer__item"><a href="#">ライセンス講習</a></li>
 							<li class="footer__item"><a href="#">体験ダイビング</a></li>
 							<li class="footer__item"><a href="#">ファンダイビング</a></li>
-							<li class="footer__item-link"><a href="page-blog.html">ブログ</a></li>
+							<li class="footer__item footer__item--icon"><a href="page-blog.html">ブログ</a></li>
 						</ul>
 					</div>
 					<div class="footer__content-left">
 						<ul class="footer__items">
-							<li class="footer__item-link"><a href="page-voice.html">お客様の声</a></li>
-							<li class="footer__item-link"><a href="page-price.html">料金一覧</a></li>
+							<li class="footer__item footer__item--icon"><a href="page-voice.html">お客様の声</a></li>
+							<li class="footer__item footer__item--icon"><a href="page-price.html">料金一覧</a></li>
 							<li class="footer__item"><a href="#">ライセンス講習</a></li>
 							<li class="footer__item"><a href="#">体験ダイビング</a></li>
 							<li class="footer__item"><a href="#">ファンダイビング</a></li>
 						</ul>
 						<ul class="footer__items">
-							<li class="footer__item-link"><a href="page-faq.html">よくある質問</a></li>
-							<li class="footer__item-link">
+							<li class="footer__item footer__item--icon"><a href="page-faq.html">よくある質問</a></li>
+							<li class="footer__item footer__item--icon">
 								<a href="page-privacy.html">プライバシー<br class="u-mobile" />ポリシー</a>
 							</li>
-							<li class="footer__item-link"><a href="page-terms-of-service.html">利用規約</a></li>
-							<li class="footer__item-link"><a href="page-contact.html">おい問わ合せ</a></li>
-							<li class="footer__item-link"><a href="page-sitemap.html">サイトマップ</a></li>
+							<li class="footer__item footer__item--icon"><a href="page-terms-of-service.html">利用規約</a></li>
+							<li class="footer__item footer__item--icon"><a href="page-contact.html">おい問わ合せ</a></li>
+							<li class="footer__item footer__item--icon"><a href="page-sitemap.html">サイトマップ</a></li>
 						</ul>
 					</div>
 				</div>

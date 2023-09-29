@@ -105,27 +105,16 @@
 	}
 }
 
-.footer__item-link a {
-	display: block;
-	max-width: rem(200);
-	width: 100%;
-	font-size: 1.6rem;
-	color: #fff;
-	font-size: rem(16);
-	font-weight: $bold;
-	line-height: 1;
-	padding-left: rem(22);
-	padding-top: rem(12);
-	padding-bottom: rem(12);
+.footer__item--icon a {
 	position: relative;
 	margin-top: rem(16);
 }
 
-.footer__item-link a:hover {
+.footer__item--icon a:hover {
 	opacity: 0.7;
 }
 
-.footer__item-link a::before {
+.footer__item--icon a::before {
 	position: absolute;
 	content: "";
 	top: 50%;
