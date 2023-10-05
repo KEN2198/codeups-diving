@@ -15,11 +15,9 @@
 	grid-template-columns: repeat(2, 1fr);
 	row-gap: rem(16);
 	column-gap: rem(20);
-	margin-top: rem(52);
 	@include mq(md) {
 		display: flex;
 		column-gap: rem(32);
-		margin-top: rem(150);
 	}
 }
 

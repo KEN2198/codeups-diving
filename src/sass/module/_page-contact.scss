@@ -2,6 +2,9 @@
 
 .page-contact__inner {
 	position: relative;
+	@include mq(md) {
+		max-width: rem(750);
+	}
 }
 
 .page-contact__inner::after {
@@ -19,12 +22,5 @@
 		width: rem(301);
 		height: rem(138);
 		top: rem(-56);
-	}
-}
-
-.page-contact__items {
-	margin-top: rem(52);
-	@include mq(md) {
-		margin-top: rem(132);
 	}
 }

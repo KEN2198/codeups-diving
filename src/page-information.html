@@ -157,22 +157,22 @@
 					<div>TOP&nbsp;&nbsp;&nbsp;> ダイビング情報</div>
 				</div>
 			</div>
-			<section class="page-information">
+			<section class="page-information information-layout">
 				<div class="page-information__inner inner">
-					<div class="tab">
+					<div class="tab" id="tabs">
 						<div class="tab__inner">
 							<ul class="tab__items">
-								<li class="tab__item is-active tab1"><a href="#tag1">ライセンス講習</a></li>
-								<li class="tab__item tab2">
-									<a href="#tag2">ファン<br class="u-mobile" />ダイビング</a>
+								<li id="tab1" class="tab__item is-active tab1"><a href="#panel1">ライセンス講習</a></li>
+								<li id="tab2" class="tab__item tab2">
+									<a href="#panel2">ファン<br class="u-mobile" />ダイビング</a>
 								</li>
-								<li class="tab__item tab3">
-									<a href="#tag3">体験<br class="u-mobile" />ダイビング</a>
+								<li id="tab3" class="tab__item tab3">
+									<a href="#panel3">体験<br class="u-mobile" />ダイビング</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-					<div class="information-card js-open" id="tag1">
+					<div class="information-card js-open" id="panel1">
 						<div class="information-card__body">
 							<div class="information-card__wrap">
 								<div class="information-card__item-left">
@@ -189,7 +189,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="information-card" id="tag2">
+					<div class="information-card" id="panel2">
 						<div class="information-card__body">
 							<div class="information-card__wrap">
 								<div class="information-card__item-left">
@@ -206,7 +206,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="information-card" id="tag3">
+					<div class="information-card" id="panel3">
 						<div class="information-card__body">
 							<div class="information-card__wrap">
 								<div class="information-card__item-left">
@@ -284,9 +284,9 @@
 						</ul>
 						<ul class="footer__items">
 							<li class="footer__item footer__item--icon"><a href="page-information.html">ダイビング情報</a></li>
-							<li class="footer__item"><a href="#">ライセンス講習</a></li>
-							<li class="footer__item"><a href="#">体験ダイビング</a></li>
-							<li class="footer__item"><a href="#">ファンダイビング</a></li>
+							<li class="footer__item"><a href="page-information.html?id=tab1">ライセンス講習</a></li>
+							<li class="footer__item"><a href="page-information.html?id=tab3">体験ダイビング</a></li>
+							<li class="footer__item"><a href="page-information.html?id=tab2">ファンダイビング</a></li>
 							<li class="footer__item footer__item--icon"><a href="page-blog.html">ブログ</a></li>
 						</ul>
 					</div>

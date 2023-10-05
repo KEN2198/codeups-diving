@@ -138,17 +138,26 @@ jQuery(function ($) {
 			}
 		});
 	});
-	$(".gallery__item").on("click", function () {
-		$($(this).attr("href")).fadeIn(100);
-		$($(this).attr("href")).next(".modal-container").fadeIn(100);
+	let scrollPos;
+
+	$(".js-photo").click(function () {
+		scrollPos = $(window).scrollTop();
+		$(".js-overlay").html($(this).prop("outerHTML"));
+		$(".js-overlay").fadeIn(200);
+		$(".js-header, .js-page-top").hide();
+		$("html").addClass("is-fixed");
 		return false;
 	});
 
-	$(".modal-bg").on("click", function () {
-		$(this).fadeOut(100);
-		$(this).next(".modal-container").fadeOut(100);
+	$(".js-overlay").click(function () {
+		$(".js-overlay").fadeOut(200, function () {
+			$(".js-header, .js-page-top").fadeIn();
+			$("html").removeClass("is-fixed");
+			$(window).scrollTop(scrollPos);
+		});
 		return false;
 	});
+
 	$(function () {
 		$(".tab__item:first-of-type").css("display", "inline-block");
 		$(".tab__item").on("click", function () {
@@ -162,6 +171,24 @@ jQuery(function ($) {
 		$(".information-card").removeClass("js-open");
 		$($(this).children("a").attr("href")).addClass("js-open");
 		return false;
+	});
+
+	$(document).ready(function () {
+		// URLからクエリパラメータを取得
+		var url = new URL(window.location.href);
+		var tabParam = url.searchParams.get("id");
+
+		// クエリパラメータから取得したタブをアクティブにする
+		$(".tab__item").removeClass("is-active");
+		// ページ読み込み時に最初のタブ "tab1" をアクティブにする
+		if (!tabParam) {
+			$("#tab1").addClass("is-active");
+			$("#panel1").show(); // 対応するコンテンツを表示
+		} else {
+			$(".information-card").hide();
+			$("#" + tabParam).addClass("is-active");
+			$("#" + tabParam.replace("tab", "panel")).show(); // 対応するコンテンツを表示
+		}
 	});
 	jQuery(function ($) {
 		$(".accordion__menu").on("click", function () {

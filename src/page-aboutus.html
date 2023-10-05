@@ -33,7 +33,7 @@
 		<script defer src="./assets/js/script.js"></script>
 	</head>
 	<body>
-		<header class="header top-header">
+		<header class="header top-header js-header">
 			<div class="header__inner">
 				<h1 class="header__logo">
 					<a href="index.html"><img src="/assets/images/header-logo.png" alt="ロゴ" /></a>
@@ -157,9 +157,9 @@
 					<div>TOP&nbsp;&nbsp;&nbsp;> 私たちについて</div>
 				</div>
 			</div>
-			<section class="page-aboutus">
+			<section class="page-aboutus aboutus-layout">
 				<div class="page-aboutus__inner inner">
-					<div class="page-aboutus__item about__item">
+					<div class="page-aboutus__item about">
 						<div class="about__img-wrap">
 							<div class="about__img-left u-desktop">
 								<img src="/assets/images/about2.jpg" alt="シーサーの写真" />
@@ -185,49 +185,27 @@
 						<p class="section-header__title">Gallery</p>
 						<h2 class="section-header__subtitle">フォト</h2>
 					</div>
-
-					<div class="gallery__items">
-						<a href="#modal1" class="gallery__item">
-							<img src="/assets/images/gallery1.jpg" alt="海中にいるサンゴと魚たち" />
-						</a>
-						<a href="#modal2" class="gallery__item">
-							<img src="/assets/images/gallery2.jpg" alt="船ときれいな海" />
-						</a>
-						<a href="#modal3" class="gallery__item">
-							<img src="/assets/images/gallery3.jpg" alt="きれいな２匹の魚" />
-						</a>
-						<a href="#modal4" class="gallery__item">
-							<img src="/assets/images/gallery4.jpg" alt="黄色い魚" />
-						</a>
-						<a href="#modal5" class="gallery__item">
-							<img src="/assets/images/gallery5.jpg" alt="青い水中と魚たち" />
-						</a>
-						<a href="#modal6" class="gallery__item">
-							<img src="/assets/images/gallery6.jpg" alt="海中と魚たち" />
-						</a>
-						<div class="modal-bg" id="modal1"></div>
-						<div class="modal-container">
-							<img src="/assets/images/gallery1.jpg" alt="画像" />
-						</div>
-						<div class="modal-bg" id="modal2"></div>
-						<div class="modal-container">
-							<img src="/assets/images/gallery2.jpg" alt="画像" />
-						</div>
-						<div class="modal-bg" id="modal3"></div>
-						<div class="modal-container">
-							<img src="/assets/images/gallery3.jpg" alt="画像" />
-						</div>
-						<div class="modal-bg" id="modal4"></div>
-						<div class="modal-container">
-							<img src="/assets/images/gallery4.jpg" alt="画像" />
-						</div>
-						<div class="modal-bg" id="modal5"></div>
-						<div class="modal-container">
-							<img src="/assets/images/gallery5.jpg" alt="画像" />
-						</div>
-						<div class="modal-bg" id="modal6"></div>
-						<div class="modal-container">
-							<img src="/assets/images/gallery6.jpg" alt="画像" />
+					<div class="gallery__wrap">
+						<div class="gallery__modal js-overlay"></div>
+						<div class="gallery__items">
+							<a class="gallery__item js-photo">
+								<img src="/assets/images/gallery1.jpg" alt="海中にいるサンゴと魚たち" />
+							</a>
+							<a class="gallery__item js-photo">
+								<img src="/assets/images/gallery2.jpg" alt="船ときれいな海" />
+							</a>
+							<a class="gallery__item js-photo">
+								<img src="/assets/images/gallery3.jpg" alt="きれいな２匹の魚" />
+							</a>
+							<a class="gallery__item js-photo">
+								<img src="/assets/images/gallery4.jpg" alt="黄色い魚" />
+							</a>
+							<a class="gallery__item js-photo">
+								<img src="/assets/images/gallery5.jpg" alt="青い水中と魚たち" />
+							</a>
+							<a class="gallery__item js-photo">
+								<img src="/assets/images/gallery6.jpg" alt="海中と魚たち" />
+							</a>
 						</div>
 					</div>
 				</div>
@@ -290,9 +268,9 @@
 						</ul>
 						<ul class="footer__items">
 							<li class="footer__item footer__item--icon"><a href="page-information.html">ダイビング情報</a></li>
-							<li class="footer__item"><a href="#">ライセンス講習</a></li>
-							<li class="footer__item"><a href="#">体験ダイビング</a></li>
-							<li class="footer__item"><a href="#">ファンダイビング</a></li>
+							<li class="footer__item"><a href="page-information.html?id=tab1">ライセンス講習</a></li>
+							<li class="footer__item"><a href="page-information.html?id=tab3">体験ダイビング</a></li>
+							<li class="footer__item"><a href="page-information.html?id=tab2">ファンダイビング</a></li>
 							<li class="footer__item footer__item--icon"><a href="page-blog.html">ブログ</a></li>
 						</ul>
 					</div>

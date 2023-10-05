@@ -9,7 +9,6 @@
 	padding-top: rem(20);
 	@include mq(md) {
 		flex-wrap: nowrap;
-		max-width: rem(700);
 		margin: auto;
 		padding-bottom: rem(38);
 		padding-top: rem(20);
@@ -25,7 +24,6 @@
 	padding-top: rem(0);
 	@include mq(md) {
 		flex-wrap: nowrap;
-		max-width: rem(700);
 		margin: auto;
 		padding-bottom: rem(40);
 		padding-top: rem(0);

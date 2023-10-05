@@ -31,13 +31,6 @@
 	}
 }
 
-.site-map__contents {
-	margin-top: rem(30);
-	@include mq(md) {
-		margin-top: rem(150);
-	}
-}
-
 .site-map__contact {
 	margin-top: rem(102);
 	@include mq(md) {

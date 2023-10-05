@@ -2,6 +2,9 @@
 
 .page-faq__inner {
 	position: relative;
+	@include mq(md) {
+		max-width: rem(750);
+	}
 }
 
 .page-faq__inner::after {

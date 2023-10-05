@@ -22,13 +22,7 @@
 	}
 }
 
-.page-aboutus__item.about__item {
-	@include mq(md) {
-		margin-top: rem(150);
-	}
-}
-
-.page-aboutus__item.about__item::after {
+.page-aboutus__item.about::after {
 	@include mq(md) {
 		position: absolute;
 		content: "";

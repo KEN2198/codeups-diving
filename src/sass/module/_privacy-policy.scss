@@ -21,13 +21,6 @@
 	}
 }
 
-.privacy-policy__contents {
-	margin-top: rem(52);
-	@include mq("md") {
-		margin-top: rem(150);
-	}
-}
-
 .privacy-policy__contents-inner {
 	max-width: rem(520);
 	width: 100%;

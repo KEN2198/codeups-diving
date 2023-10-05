@@ -1,5 +1,15 @@
 @use "global" as *;
 
+.price-table {
+	width: 100%;
+	@include mq(md) {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
 .price-table__head {
 	display: flex;
 	align-items: center;
@@ -60,14 +70,14 @@
 }
 
 .price-table__course {
-	width: 69.5%;
+	width: 69.56%;
 	text-align: center;
 	padding: rem(7) rem(16);
 	border-right: rem(1) solid $accent-color;
 	@include mq("md") {
-		width: rem(340);
 		text-align: left;
 		padding: rem(18) rem(16);
+		width: 68%;
 	}
 }
 
@@ -79,11 +89,18 @@
 }
 
 .price-table__price {
-	width: 30.5%;
+	width: 30.4%;
 	padding: rem(19) rem(16);
 	text-align: right;
 	@include mq("md") {
-		width: rem(160);
 		padding: rem(18) rem(16);
+		width: 32%;
+	}
+}
+
+.price-table__block {
+	width: 100%;
+	@include mq(md) {
+		width: 72%;
 	}
 }

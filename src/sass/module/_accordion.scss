@@ -3,12 +3,9 @@
 .accordion__contents {
 	display: grid;
 	gap: rem(42);
-	margin-top: rem(52);
 	@include mq(md) {
-		max-width: rem(700);
 		width: 100%;
 		margin: auto;
-		margin-top: rem(150);
 		gap: rem(46);
 	}
 }
