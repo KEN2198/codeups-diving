@@ -23,6 +23,13 @@
 	}
 }
 
+.page-information__card {
+	margin-top: rem(16);
+	@include mq(md) {
+		margin-top: rem(24);
+	}
+}
+
 .page-information__contact {
 	margin-top: rem(106);
 	@include mq(md) {

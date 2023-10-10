@@ -10,10 +10,6 @@
 .information-card__body {
 	padding: rem(24);
 	border: rem(1) solid $accent-color;
-	margin-top: rem(16);
-	@include mq(md) {
-		margin-top: rem(24);
-	}
 }
 
 .information-card__wrap {

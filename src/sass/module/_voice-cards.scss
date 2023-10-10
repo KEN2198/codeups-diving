@@ -11,13 +11,6 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
-		gap: rem(40);
-	}
-}
-
-.voice-cards--page-voice {
-	@include mq(md) {
-		column-gap: rem(40);
-		row-gap: rem(87);
+		gap: rem(87) rem(40);
 	}
 }
